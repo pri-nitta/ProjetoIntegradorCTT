@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        xmlns:tools="http://schemas.android.com/tools">
+
+
+    <TextView
+            android:id="@+id/txtPriority"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="20dp"
+            android:textSize="30sp"
+            tools:text="1"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:background="@drawable/img_round"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp"/>
+
+    <TextView
+            android:id="@+id/txtActTitle"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textSize="18sp"
+            tools:text="Activity title"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@+id/txtPriority"
+            app:layout_constraintStart_toEndOf="@+id/txtPriority"
+            android:layout_marginTop="8dp"/>
+
+    <TextView
+            android:id="@+id/txtDeadline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textSize="15sp"
+            android:layout_marginEnd="300dp"
+            tools:text="Deadline: 15/03"
+            app:layout_constraintTop_toBottomOf="@+id/txtActTitle"
+            app:layout_constraintStart_toEndOf="@+id/txtPriority">
+
+    </TextView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
