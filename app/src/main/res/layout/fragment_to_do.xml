@@ -5,10 +5,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        tools:context=".DoneFragment">
+        tools:context=".ToDoFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/doneList"
+            android:id="@+id/toDoList"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             app:layout_constraintStart_toStartOf="parent"
