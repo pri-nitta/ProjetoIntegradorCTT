@@ -9,7 +9,7 @@
 
     <TextView
             android:id="@+id/txtTitle"
-            android:background="@drawable/layout_bg"
+            android:background="@drawable/layout_bg_bottom"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:text="@string/txt_appTitle"
@@ -23,7 +23,7 @@
 
     <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
-            android:background="@drawable/layout_bg"
+            android:background="@drawable/layout_bg_small"
             android:backgroundTint="@color/colorAccent"
             android:layout_width="350dp"
             android:layout_height="wrap_content"

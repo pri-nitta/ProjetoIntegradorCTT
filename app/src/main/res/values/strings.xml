@@ -3,4 +3,10 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="txt_appTitle">Oppa Kanban Style!</string>
+    <string name="btnCreateTask">Criar tarefa</string>
+    <string name="txt_nova_tarefa">Nova Tarefa</string>
+    <string name="txt_addTaskDesc">Adicione uma tarefa que ainda será feita</string>
+    <string name="edtTaskTitle">Título da tarefa*</string>
+    <string name="edtTaskDesc">Descrição da tarefa</string>
+    <string name="btnStartTask">Iniciar tarefa</string>
 </resources>
