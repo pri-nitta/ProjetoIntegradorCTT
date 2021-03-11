@@ -9,4 +9,6 @@
     <string name="edtTaskTitle">Título da tarefa*</string>
     <string name="edtTaskDesc">Descrição da tarefa</string>
     <string name="btnStartTask">Iniciar tarefa</string>
+    <string name="btnExclude">Excluir tarefa</string>
+    <string name="btnFinalizeTask">Finalizar Tarefa</string>
 </resources>
