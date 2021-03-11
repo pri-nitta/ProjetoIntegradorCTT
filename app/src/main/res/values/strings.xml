@@ -11,4 +11,6 @@
     <string name="btnStartTask">Iniciar tarefa</string>
     <string name="btnExclude">Excluir tarefa</string>
     <string name="btnFinalizeTask">Finalizar Tarefa</string>
+    <string name="btnAdd">+ adicionar</string>
+    <string name="edtSearch">Pesquise por tarefas a serem feitas</string>
 </resources>
