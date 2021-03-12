@@ -11,7 +11,6 @@ import com.ctt.projetointegradorctt.R
 class ToDoAdapter (private val toDoList: MutableList<Activities>) : RecyclerView.Adapter<ToDoAdapter.ToDoHolder>(){
     class ToDoHolder(view: View) : RecyclerView.ViewHolder(view) {
         val titleToDo: TextView = view.findViewById(R.id.txtActTitle)
-        val deadlineToDo: TextView = view.findViewById(R.id.txtDeadline)
         val priorityToDo: ImageView = view.findViewById(R.id.txtPriority)
     }
 
@@ -23,7 +22,6 @@ class ToDoAdapter (private val toDoList: MutableList<Activities>) : RecyclerView
 
     override fun onBindViewHolder(holder: ToDoHolder, position: Int) {
         holder.titleToDo.text= toDoList[position].title
-        holder.deadlineToDo.text= toDoList[position].deadline
         holder.priorityToDo.text= toDoList[position].priority
     }
 
