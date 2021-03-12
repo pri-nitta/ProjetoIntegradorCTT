@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/colorAccent"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <ImageView android:id="@+id/splashscreen"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/ic_gangnam_style"
+               android:layout_marginTop="150dp"
+               android:layout_gravity="center"/>
+
+    <TextView android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:textColor="@color/colorPrimary"
+              android:textSize="30sp"
+              android:textStyle="bold"
+              android:textAllCaps="true"
+              android:textAlignment="center"
+              android:text="@string/txtoppa_kanban_style"/>
+
+    <TextView android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:textColor="@color/colorAccent"
+              android:background="@color/colorPrimary"
+              android:textSize="20sp"
+              android:padding="5dp"
+              android:textAlignment="center"
+              android:text="Ajudando você a se organizar"/>
+
+</LinearLayout>

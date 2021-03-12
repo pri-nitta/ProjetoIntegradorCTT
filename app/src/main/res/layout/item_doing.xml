@@ -30,8 +30,4 @@
             app:layout_constraintTop_toBottomOf="@+id/txtActTitle"
             app:layout_constraintStart_toStartOf="parent"/>
 
-    </TextView>
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
