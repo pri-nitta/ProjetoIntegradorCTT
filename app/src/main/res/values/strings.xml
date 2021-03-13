@@ -1,7 +1,5 @@
 <resources>
-    <string name="app_name">ProjetoIntegradorCTT</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="txt_appTitle">Oppa Kanban Style!</string>
+    <string name="app_name">Oppa Kanban Style!</string>
     <string name="btnCreateTask">Criar tarefa</string>
     <string name="txt_nova_tarefa">Nova Tarefa</string>
     <string name="txt_addTaskDesc">Adicione uma tarefa que ainda será feita</string>
@@ -10,8 +8,10 @@
     <string name="btnStartTask">Iniciar tarefa</string>
     <string name="btnExclude">Excluir tarefa</string>
     <string name="btnFinalizeTask">Finalizar Tarefa</string>
-    <string name="btnAdd">+ adicionar</string>
-    <string name="edtSearch">Pesquise por tarefas a serem feitas</string>
+    <string name="btnAdd">adicionar</string>
+    <string name="edtSearch1">Pesquise por tarefas a serem feitas</string>
+    <string name="edtSearch3">Pesquise por tarefas feitas</string>
+    <string name="edtSearch2">Pesquise por tarefas em andamento</string>
     <string name="btnSave">Salvar</string>
     <string name="txtoppa_kanban_style">Oppa Kanban Style!</string>
 </resources>

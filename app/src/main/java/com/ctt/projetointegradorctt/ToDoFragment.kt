@@ -28,5 +28,4 @@ class ToDoFragment : Fragment() {
         rvToDo.adapter = adapterToDo
         rvToDo.layoutManager = LinearLayoutManager(requireContext())
     }
-
 }

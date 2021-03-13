@@ -11,12 +11,12 @@ import com.ctt.projetointegradorctt.R
     class DoneAdapter (private val doneList: MutableList<Activities>) : RecyclerView.Adapter<DoneAdapter.DoneHolder>(){
         class DoneHolder(view: View) : RecyclerView.ViewHolder(view) {
             val titleDone: TextView = view.findViewById(R.id.txtDoneTitle)
-            val descDone: ImageView = view.findViewById(R.id.txtDoneDescription)
+            val descDone: TextView = view.findViewById(R.id.txtDoneDescription)
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DoneHolder {
             val view = LayoutInflater.from(parent.context).
-            inflate(R.layout.item_to_do, parent, false)
+            inflate(R.layout.item_done, parent, false)
             return DoneHolder(view)
         }
 
@@ -27,4 +27,3 @@ import com.ctt.projetointegradorctt.R
 
         override fun getItemCount(): Int = doneList.size
     }
-}

@@ -9,27 +9,22 @@
 
     <TextView
             android:id="@+id/txtTitle"
-            android:background="@drawable/layout_bg_bottom"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:text="@string/txt_appTitle"
-            android:textSize="20sp"
-            android:paddingTop="40dp"
-            android:paddingStart="30dp"
+            android:layout_height="65dp"
             android:textColor="@color/colorAccent"
             android:textStyle="bold"
-            android:backgroundTint="@color/colorPrimaryDark"
+            android:background="@color/colorPrimaryDark"
     />
 
     <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:background="@drawable/layout_bg_small"
             android:backgroundTint="@color/colorAccent"
-            android:layout_width="350dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             app:tabTextColor="@color/colorPrimary"
             app:tabSelectedTextColor="@color/colorLight"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="10dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

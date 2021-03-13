@@ -11,7 +11,7 @@ import com.ctt.projetointegradorctt.R
 class ToDoAdapter (private val toDoList: MutableList<Activities>) : RecyclerView.Adapter<ToDoAdapter.ToDoHolder>(){
     class ToDoHolder(view: View) : RecyclerView.ViewHolder(view) {
         val titleToDo: TextView = view.findViewById(R.id.txtToDoTitle)
-        val descToDo: ImageView = view.findViewById(R.id.txtToDoDescr)
+        val descToDo: TextView = view.findViewById(R.id.txtToDoDescr)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ToDoHolder {

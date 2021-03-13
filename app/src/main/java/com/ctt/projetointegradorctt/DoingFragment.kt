@@ -28,5 +28,4 @@ class DoingFragment : Fragment() {
         rvDoing.adapter = adapterDoing
         rvDoing.layoutManager = LinearLayoutManager(requireContext())
     }
-
 }
