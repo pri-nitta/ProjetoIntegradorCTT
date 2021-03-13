@@ -2,6 +2,7 @@ package com.ctt.projetointegradorctt
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.viewpager.widget.ViewPager
 import com.ctt.projetointegradorctt.model.PagerAdapter
 import com.google.android.material.tabs.TabLayout

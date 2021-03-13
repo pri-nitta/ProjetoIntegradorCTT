@@ -10,8 +10,8 @@ import com.ctt.projetointegradorctt.R
 
 class ToDoAdapter (private val toDoList: MutableList<Activities>) : RecyclerView.Adapter<ToDoAdapter.ToDoHolder>(){
     class ToDoHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val titleToDo: TextView = view.findViewById(R.id.txtActTitle)
-        val priorityToDo: ImageView = view.findViewById(R.id.txtPriority)
+        val titleToDo: TextView = view.findViewById(R.id.txtToDoTitle)
+        val descToDo: ImageView = view.findViewById(R.id.txtToDoDescr)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ToDoHolder {
@@ -22,7 +22,7 @@ class ToDoAdapter (private val toDoList: MutableList<Activities>) : RecyclerView
 
     override fun onBindViewHolder(holder: ToDoHolder, position: Int) {
         holder.titleToDo.text= toDoList[position].title
-        holder.priorityToDo.text= toDoList[position].priority
+        holder.descToDo.text= toDoList[position].description
     }
 
     override fun getItemCount(): Int = toDoList.size

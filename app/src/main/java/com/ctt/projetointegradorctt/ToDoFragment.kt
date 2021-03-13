@@ -21,11 +21,11 @@ class ToDoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val toDoList = mutableListOf<Activities>(
-            Activities(title = "Curso Trello", priority = "1", deadline = "01/05")
+            Activities(title = "Curso Trello", description = "afferson")
         )
         val rvToDo = view.findViewById<RecyclerView>(R.id.toDoList)
         val adapterToDo = ToDoAdapter(toDoList)
-        rvToDo.adapter = ToDoAdapter
+        rvToDo.adapter = adapterToDo
         rvToDo.layoutManager = LinearLayoutManager(requireContext())
     }
 

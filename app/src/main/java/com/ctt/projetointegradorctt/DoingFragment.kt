@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ctt.projetointegradorctt.model.Activities
+import com.ctt.projetointegradorctt.model.DoingAdapter
 
 class DoingFragment : Fragment() {
     override fun onCreateView(
@@ -20,7 +21,7 @@ class DoingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val doingList = mutableListOf<Activities>(
-            Activities(title = "Curso Trello", description = "Terminar curso de Trello", deadline = "01/05")
+            Activities(title = "Curso Trello", description = "Terminar curso de Trello")
         )
         val rvDoing = view.findViewById<RecyclerView>(R.id.doingList)
         val adapterDoing = DoingAdapter(doingList)

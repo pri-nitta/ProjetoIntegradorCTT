@@ -4,19 +4,25 @@ import android.os.Bundle
 import android.app.Activity
 import android.os.Handler
 import android.view.Menu
+import android.view.WindowManager
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat.startActivity
 
-
-class Splash : Activity() {
-    private val SPLASH_DISPLAY_LENGTH = 1000
-
-    public override fun onCreate(icicle: Bundle?) {
-        super.onCreate(icicle)
+@Suppress("DEPRECATION")
+class Splash : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         setContentView(R.layout.splash)
 
-        Handler().postDelayed(Runnable {
-            val mainIntent = Intent(this@Splash, Menu::class.java)
-            this@Splash.startActivity(mainIntent)
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        )
+
+        Handler().postDelayed({
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
             finish()
-        }, SPLASH_DISPLAY_LENGTH.toLong())
+        }, 3000)
     }
 }
