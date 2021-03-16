@@ -1,4 +1,4 @@
-package com.ctt.projetointegradorctt
+package com.ctt.projetointegradorctt.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

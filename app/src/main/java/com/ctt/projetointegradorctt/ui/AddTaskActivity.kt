@@ -1,10 +1,14 @@
-package com.ctt.projetointegradorctt
+package com.ctt.projetointegradorctt.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.ctt.projetointegradorctt.MainActivity
+import com.ctt.projetointegradorctt.MainActivity.Companion.toDoListMain
+import com.ctt.projetointegradorctt.R
 import com.ctt.projetointegradorctt.model.Activities
 import kotlinx.android.synthetic.main.fragment_to_do.*
 
@@ -14,12 +18,10 @@ class AddTaskActivity: AppCompatActivity() {
     private lateinit var tituloAct : EditText
     private lateinit var descAct : EditText
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onCreate(savedInstanceState: Bundle?) { super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_task)
 
         botaoCadastrar = findViewById<Button>(R.id.btnCreateTask)
-
         tituloAct = findViewById(R.id.edtTaskTitle)
         descAct = findViewById(R.id.edtTaskDesc)
 
@@ -30,6 +32,7 @@ class AddTaskActivity: AppCompatActivity() {
                tituloAct.error ="Digite um título!"
            } else{
                val register = Activities(typedTitle,typedDesc)
+               val activity = Activities(typedTitle,typedDesc)
                actionBtn()
                redirectRegister(activity)
            }
@@ -41,7 +44,7 @@ class AddTaskActivity: AppCompatActivity() {
     }
 
     fun redirectRegister(activity: Activities){
-        MainActivity.toDoListMain.add(Activities())
+        MainActivity.toDoListMain.add(activity)
         finish()
     }
 }

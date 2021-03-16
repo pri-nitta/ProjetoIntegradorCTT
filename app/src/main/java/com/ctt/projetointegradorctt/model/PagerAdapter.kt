@@ -3,9 +3,9 @@ package com.ctt.projetointegradorctt.model
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.ctt.projetointegradorctt.DoingFragment
-import com.ctt.projetointegradorctt.DoneFragment
-import com.ctt.projetointegradorctt.ToDoFragment
+import com.ctt.projetointegradorctt.ui.DoingFragment
+import com.ctt.projetointegradorctt.ui.DoneFragment
+import com.ctt.projetointegradorctt.ui.ToDoFragment
 
 class PagerAdapter (fragmentManager: FragmentManager) : FragmentPagerAdapter(fragmentManager){
     override fun getCount(): Int {

@@ -8,6 +8,8 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.viewpager.widget.ViewPager
 import com.ctt.projetointegradorctt.model.Activities
 import com.ctt.projetointegradorctt.model.PagerAdapter
+import com.ctt.projetointegradorctt.model.ToDoAdapter
+import com.ctt.projetointegradorctt.ui.ToDoFragment
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.tabs.TabLayout
 
@@ -25,13 +27,6 @@ class MainActivity : AppCompatActivity() {
         viewPager.adapter = PagerAdapter(supportFragmentManager)
         tabLayout.setupWithViewPager(viewPager)
 
-        bottomSheetBehavior = BottomSheetBehavior.from(activity_add_task)
-
-        bottomSheetBehavior.addBottomSheetCallback(object :
-            BottomSheetBehavior.BottomSheetCallback() {
-            override fun onSlide(bottomSheet: View, slideOffset: Float) {
-            }
-        }
     }
 
     companion object {
@@ -39,4 +34,5 @@ class MainActivity : AppCompatActivity() {
         val doingListMain = mutableListOf<Activities>()
         val doneListaMain = mutableListOf<Activities>()
     }
+
 }
