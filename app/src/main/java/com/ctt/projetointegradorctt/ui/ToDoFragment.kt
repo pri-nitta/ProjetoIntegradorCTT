@@ -1,4 +1,5 @@
 package com.ctt.projetointegradorctt.ui
+
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ctt.projetointegradorctt.MainActivity
@@ -23,7 +25,8 @@ class ToDoFragment : Fragment() {
     lateinit var edtSearchTaskTyped: EditText
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?):View? {
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+    ): View? {
         return inflater.inflate(R.layout.fragment_to_do, container, false)
     }
 
@@ -45,13 +48,15 @@ class ToDoFragment : Fragment() {
         btnSearchTask = view.findViewById(R.id.btnSearch1)
         edtSearchTaskTyped = view.findViewById(R.id.edtSearchTask1)
 
-        btnSearchTask.setOnClickListener{
-            if(edtSearchTaskTyped in toDoListMain) {
-                val intent2 = Intent(MainActivity(),ViewTaskActivity::class.java)
-                MainActivity().startActivity(intent2)
-            } else{
-                edtSearchTaskTyped.error="Atividade não encontrada :("
-            }
+        val titulo = edtSearchTaskTyped.text.toString()
+
+        btnSearchTask.setOnClickListener {
+                if (toDoListMain.contains(edtSearchTaskTyped)) {
+                    val intent2 = Intent(MainActivity(), ViewTaskActivity::class.java)
+                    MainActivity().startActivity(intent2)
+                }else {
+                    edtSearchTaskTyped.error = "Atividade não encontrada :("
+                }
         }
     }
 

@@ -6,9 +6,17 @@
         android:layout_height="80dp"
         xmlns:tools="http://schemas.android.com/tools">
 
+<!--    <TextView-->
+<!--            android:id="@+id/txtlinefine3"-->
+<!--            android:background="@color/colorLight"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="2dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--    />-->
+
     <TextView
             android:id="@+id/txtDoingTitle"
-            android:textColor="@color/colorBeige"
+            android:textColor="@color/colorPrimary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="18sp"

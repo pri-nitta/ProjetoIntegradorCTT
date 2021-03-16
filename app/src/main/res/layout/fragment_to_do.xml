@@ -19,10 +19,10 @@
 
     <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/toDoList"
-            android:layout_marginTop="90dp"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             android:paddingTop="20dp"
+            android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -54,21 +54,4 @@
             app:layout_constraintTop_toTopOf="@+id/edtSearchTask1"
             app:layout_constraintBottom_toBottomOf="@+id/edtSearchTask1"/>
 
-<!--    <Button-->
-<!--            android:id="@+id/btnAdd"-->
-<!--            android:background="@drawable/layout_button"-->
-<!--            android:backgroundTint="@color/colorPrimary"-->
-<!--            android:layout_width="150dp"-->
-<!--            android:layout_height="50dp"-->
-<!--            android:layout_marginBottom="80dp"-->
-<!--            android:layout_marginEnd="20dp"-->
-<!--            android:text="@string/btnAdd"-->
-<!--            android:textSize="14sp"-->
-<!--            android:drawableStart="@drawable/ic_add"-->
-<!--            android:textColor="@color/colorLight"-->
-<!--            android:textAlignment="center"-->
-<!--            android:paddingStart="20dp"-->
-<!--            android:paddingEnd="20dp"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"/>-->
 </androidx.constraintlayout.widget.ConstraintLayout>
