@@ -14,6 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -29,7 +30,7 @@
     />
 
     <EditText
-            android:id="@+id/edtSearchTask"
+            android:id="@+id/edtSearchTask1"
             android:background="@drawable/layout_bg_small"
             android:backgroundTint="@color/colorLight"
             android:layout_width="300dp"
@@ -43,32 +44,31 @@
             app:layout_constraintBottom_toBottomOf="@+id/imgContinue"
             tools:ignore="RtlSymmetry"/>
 
-    <ImageButton
-            android:id="@+id/btnSearch"
-            android:src="@drawable/ic_magnifying_glass"
+    <Button
+            android:id="@+id/btnSearch1"
+            android:background="@drawable/ic_magnifying_glass"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="10dp"
-            android:backgroundTint="@color/colorLight"
-            app:layout_constraintStart_toStartOf="@+id/edtSearchTask"
-            app:layout_constraintTop_toTopOf="@+id/edtSearchTask"
-            app:layout_constraintBottom_toBottomOf="@+id/edtSearchTask"/>
+            app:layout_constraintStart_toStartOf="@+id/edtSearchTask1"
+            app:layout_constraintTop_toTopOf="@+id/edtSearchTask1"
+            app:layout_constraintBottom_toBottomOf="@+id/edtSearchTask1"/>
 
-    <Button
-            android:id="@+id/btnAdd"
-            android:background="@drawable/layout_button"
-            android:backgroundTint="@color/colorPrimary"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_marginBottom="80dp"
-            android:layout_marginEnd="20dp"
-            android:text="@string/btnAdd"
-            android:textSize="14sp"
-            android:drawableStart="@drawable/ic_add"
-            android:textColor="@color/colorLight"
-            android:textAlignment="center"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+<!--    <Button-->
+<!--            android:id="@+id/btnAdd"-->
+<!--            android:background="@drawable/layout_button"-->
+<!--            android:backgroundTint="@color/colorPrimary"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginBottom="80dp"-->
+<!--            android:layout_marginEnd="20dp"-->
+<!--            android:text="@string/btnAdd"-->
+<!--            android:textSize="14sp"-->
+<!--            android:drawableStart="@drawable/ic_add"-->
+<!--            android:textColor="@color/colorLight"-->
+<!--            android:textAlignment="center"-->
+<!--            android:paddingStart="20dp"-->
+<!--            android:paddingEnd="20dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"/>-->
 </androidx.constraintlayout.widget.ConstraintLayout>

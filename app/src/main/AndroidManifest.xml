@@ -10,6 +10,11 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity android:name=".MainActivity"></activity>
+        <activity android:name=".ui.AddTaskActivity"></activity>
+        <activity android:name=".ui.DoneActivity"></activity>
+        <activity android:name=".ui.ViewTaskActivity"></activity>
+        <activity android:name=".ui.EditTaskActivity"></activity>
+        <activity android:name=".ui.EndTaskActivity"></activity>
         <activity
                 android:name=".Splash"
                 android:theme="@style/Theme.AppCompat.Light.NoActionBar">

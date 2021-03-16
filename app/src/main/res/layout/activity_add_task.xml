@@ -7,9 +7,7 @@
         android:background="@drawable/layout_bg_top"
         android:backgroundTint="@color/colorAccent"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:behavior_peekHeight="@dimen/dimen_32"
-        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+        android:layout_height="match_parent">
 
     <TextView
             android:id="@+id/txtNewTaskTitle"
@@ -87,6 +85,5 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

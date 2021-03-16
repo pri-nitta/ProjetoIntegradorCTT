@@ -38,4 +38,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
+    <Button
+            android:id="@+id/btnAdd"
+            android:background="@drawable/layout_button"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="80dp"
+            android:layout_marginEnd="20dp"
+            android:text="@string/btnAdd"
+            android:textSize="14sp"
+            android:drawableStart="@drawable/ic_add"
+            android:textColor="@color/colorLight"
+            android:textAlignment="center"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

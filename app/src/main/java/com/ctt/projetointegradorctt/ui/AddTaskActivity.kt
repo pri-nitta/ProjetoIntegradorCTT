@@ -1,6 +1,5 @@
 package com.ctt.projetointegradorctt.ui
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -10,18 +9,17 @@ import com.ctt.projetointegradorctt.MainActivity
 import com.ctt.projetointegradorctt.MainActivity.Companion.toDoListMain
 import com.ctt.projetointegradorctt.R
 import com.ctt.projetointegradorctt.model.Activities
-import kotlinx.android.synthetic.main.fragment_to_do.*
 
 class AddTaskActivity: AppCompatActivity() {
 
-    private lateinit var botaoCadastrar : Button
-    private lateinit var tituloAct : EditText
-    private lateinit var descAct : EditText
+lateinit var botaoCadastrar : Button
+lateinit var tituloAct : EditText
+lateinit var descAct : EditText
 
-    override fun onCreate(savedInstanceState: Bundle?) { super.onCreate(savedInstanceState)
+    override fun onCreate(savedInstanceState: Bundle?) {super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_task)
 
-        botaoCadastrar = findViewById<Button>(R.id.btnCreateTask)
+        botaoCadastrar = findViewById(R.id.btnCreateTask)
         tituloAct = findViewById(R.id.edtTaskTitle)
         descAct = findViewById(R.id.edtTaskDesc)
 
@@ -29,22 +27,21 @@ class AddTaskActivity: AppCompatActivity() {
             val typedTitle = tituloAct.text.toString()
             val typedDesc = descAct.text.toString()
            if(typedTitle.isEmpty()){
-               tituloAct.error ="Digite um título!"
+               tituloAct.error ="Digite ao menos um título!"
            } else{
-               val register = Activities(typedTitle,typedDesc)
                val activity = Activities(typedTitle,typedDesc)
-               actionBtn()
+               toastBtn()
                redirectRegister(activity)
            }
         }
     }
 
-    fun actionBtn(){
+    fun toastBtn(){
         Toast.makeText(this,"Tarefa cadastrada com sucesso!",Toast.LENGTH_SHORT).show()
     }
 
     fun redirectRegister(activity: Activities){
-        MainActivity.toDoListMain.add(activity)
+       toDoListMain.add(activity)
         finish()
     }
 }

@@ -22,7 +22,6 @@ class ToDoAdapter (private val toDoList: MutableList<Activities>) : RecyclerView
 
     companion object{
         fun notificar (){
-
         }
     }
 

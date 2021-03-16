@@ -19,10 +19,8 @@ import kotlinx.android.synthetic.main.fragment_to_do.*
 class ToDoFragment : Fragment() {
 
     lateinit var adapter: ToDoAdapter
-    lateinit var btnAddTask: Button
     lateinit var btnSearchTask: Button
     lateinit var edtSearchTaskTyped: EditText
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?):View? {
@@ -32,28 +30,27 @@ class ToDoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val toDoListNew: MutableList<Activities> = mutableListOf(
-            Activities(title = "Exercícios do Hacker Rank", description = "Terminar lista de lógica"),
-            Activities(title = "Skin care", description = "Passar ácido glicólico todas as noites")
-        )
+//        val toDoListNew: MutableList<Activities> = mutableListOf(
+//            Activities(title = "Exercícios do Hacker Rank", description = "Terminar lista de lógica"),
+//            Activities(title = "Skin care", description = "Passar ácido glicólico todas as noites")
+//        )
 
         MainActivity.toDoListMain.add(Activities())
 
         val rvToDo = view.findViewById<RecyclerView>(R.id.toDoList)
         adapter = ToDoAdapter(MainActivity.toDoListMain)
         rvToDo.adapter = adapter
-
         rvToDo.layoutManager = LinearLayoutManager(requireContext())
 
-        btnAddTask.setOnClickListener {
-            val intent = Intent(MainActivity(),AddTaskActivity::class.java)
-            MainActivity().startActivity(intent)
-        }
+        btnSearchTask = view.findViewById(R.id.btnSearch1)
+        edtSearchTaskTyped = view.findViewById(R.id.edtSearchTask1)
 
         btnSearchTask.setOnClickListener{
             if(edtSearchTaskTyped in toDoListMain) {
                 val intent2 = Intent(MainActivity(),ViewTaskActivity::class.java)
-
+                MainActivity().startActivity(intent2)
+            } else{
+                edtSearchTaskTyped.error="Atividade não encontrada :("
             }
         }
     }

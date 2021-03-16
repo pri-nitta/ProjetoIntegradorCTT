@@ -29,7 +29,7 @@
     />
 
     <EditText
-            android:id="@+id/edtSearchTask"
+            android:id="@+id/edtSearchTask3"
             android:background="@drawable/layout_bg_small"
             android:backgroundTint="@color/colorLight"
             android:layout_width="300dp"
@@ -50,8 +50,8 @@
             android:layout_height="30dp"
             android:layout_marginStart="10dp"
             android:backgroundTint="@color/colorLight"
-            app:layout_constraintStart_toStartOf="@+id/edtSearchTask"
-            app:layout_constraintTop_toTopOf="@+id/edtSearchTask"
-            app:layout_constraintBottom_toBottomOf="@+id/edtSearchTask"/>
+            app:layout_constraintStart_toStartOf="@+id/edtSearchTask3"
+            app:layout_constraintTop_toTopOf="@+id/edtSearchTask3"
+            app:layout_constraintBottom_toBottomOf="@+id/edtSearchTask3"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
