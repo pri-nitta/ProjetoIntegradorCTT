@@ -3,11 +3,14 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".AddTaskActivity"
         android:layout_marginTop="80dp"
         android:background="@drawable/layout_bg_top"
         android:backgroundTint="@color/colorAccent"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:behavior_peekHeight="@dimen/dimen_32"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
     <TextView
             android:id="@+id/txtNewTaskTitle"
@@ -17,7 +20,7 @@
             android:textStyle="bold"
             android:textSize="25sp"
             android:textColor="@color/black"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="60dp"
             android:layout_marginTop="70dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"/>
@@ -40,13 +43,13 @@
             android:text="@string/txt_addTaskDesc"
             android:textSize="15sp"
             android:textColor="@color/black"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="60dp"
             app:layout_constraintTop_toBottomOf="@id/txtNewTaskTitle"
             app:layout_constraintStart_toStartOf="parent"/>
 
     <EditText
             android:id="@+id/edtTaskTitle"
-            android:layout_width="350dp"
+            android:layout_width="300dp"
             android:layout_height="60dp"
             android:layout_marginTop="20dp"
             android:background="@color/colorLight"
@@ -59,7 +62,7 @@
 
     <EditText
             android:id="@+id/edtTaskDesc"
-            android:layout_width="350dp"
+            android:layout_width="300dp"
             android:layout_height="150dp"
             android:layout_marginTop="20dp"
             android:background="@color/colorLight"
@@ -74,7 +77,7 @@
 
     <Button
             android:id="@+id/btnCreateTask"
-            android:layout_width="350dp"
+            android:layout_width="300dp"
             android:layout_height="60dp"
             android:background="@drawable/layout_bg_small"
             android:backgroundTint="@color/colorPrimaryDark"
