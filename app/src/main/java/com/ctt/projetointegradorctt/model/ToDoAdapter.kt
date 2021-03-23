@@ -37,7 +37,7 @@ class ToDoAdapter(private val toDoList: MutableList<Activities>) : RecyclerView.
 
     override fun getItemCount(): Int = toDoList.size
 
-    val btnRemoved: Button = view.findViewById(R.id.BtnRemove)
-    btnRemoved.setOnClickListener {
-        toDoListMain.remove }
+//    val btnRemoved: Button = view.findViewById(R.id.BtnRemove)
+//    btnRemoved.setOnClickListener {
+//        toDoListMain.remove }
 }
