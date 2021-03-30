@@ -22,17 +22,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val btnAddTask = findViewById<Button>(R.id.btnAdd)
         val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
         val viewPager = findViewById<ViewPager>(R.id.viewPager)
 
         viewPager.adapter = PagerAdapter(supportFragmentManager)
         tabLayout.setupWithViewPager(viewPager)
-
-        btnAddTask.setOnClickListener {
-            val intent = Intent(this, AddTaskActivity::class.java)
-            startActivity(intent)
-        }
     }
 
     companion object {

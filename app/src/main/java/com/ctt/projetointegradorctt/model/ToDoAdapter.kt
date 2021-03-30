@@ -16,8 +16,8 @@ class ToDoAdapter(private val toDoList: MutableList<Activities>) : RecyclerView.
     class ToDoHolder(view: View) : RecyclerView.ViewHolder(view) {
         val titleToDo: TextView = view.findViewById(R.id.txtToDoTitle)
         val descToDo: TextView = view.findViewById(R.id.txtToDoDescr)
-        val btnRemoved: Button = view.findViewById(R.id.BtnRemove)
-        val chkPass: CheckBox = view.findViewById(R.id.chkConfirm)
+//        val btnRemoved: Button = view.findViewById(R.id.BtnRemove)
+//        val chkPass: CheckBox = view.findViewById(R.id.chkConfirm)
 
     }
 

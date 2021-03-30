@@ -4,7 +4,6 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorLight"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         tools:context=".ui.ToDoFragment">
 
@@ -53,5 +52,23 @@
             app:layout_constraintStart_toStartOf="@+id/edtSearchTask1"
             app:layout_constraintTop_toTopOf="@+id/edtSearchTask1"
             app:layout_constraintBottom_toBottomOf="@+id/edtSearchTask1"/>
+
+    <Button
+            android:id="@+id/btnAdd"
+            android:background="@drawable/layout_button"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="80dp"
+            android:layout_marginEnd="20dp"
+            android:text="@string/btnAdd"
+            android:textSize="14sp"
+            android:drawableStart="@drawable/ic_add"
+            android:textColor="@color/colorLight"
+            android:textAlignment="center"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

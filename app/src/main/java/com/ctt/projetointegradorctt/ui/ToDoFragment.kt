@@ -6,21 +6,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.CheckBox
 import android.widget.EditText
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ctt.projetointegradorctt.MainActivity
-import com.ctt.projetointegradorctt.MainActivity.Companion.toDoListMain
 import com.ctt.projetointegradorctt.R
-import com.ctt.projetointegradorctt.model.Activities
 import com.ctt.projetointegradorctt.model.ToDoAdapter
 
 class ToDoFragment : androidx.fragment.app.Fragment() {
 
     lateinit var adapter: ToDoAdapter
-    lateinit var btnSearchTask: Button
+//    lateinit var btnSearchTask: Button
     lateinit var edtSearchTaskTyped: EditText
+    lateinit var btnAddTask: Button
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -36,25 +34,31 @@ class ToDoFragment : androidx.fragment.app.Fragment() {
         rvToDo.adapter = adapter
         rvToDo.layoutManager = LinearLayoutManager(requireContext())
 
-        btnSearchTask = view.findViewById(R.id.btnSearch1)
+        btnAddTask = view.findViewById(R.id.btnAdd)
+//        btnSearchTask = view.findViewById(R.id.btnSearch1)
         edtSearchTaskTyped = view.findViewById(R.id.edtSearchTask1)
 //        btnRemoved = view.findViewById(R.id.BtnRemove)
 
         val titulo = edtSearchTaskTyped.text.toString()
+
+        btnAddTask.setOnClickListener{
+            val intent3 = Intent(requireActivity(), AddTaskActivity::class.java)
+            requireActivity().startActivity(intent3)
+        }
 
 //        btnRemoved.setOnClickListener{
 //            toDoListMain.remove(it)
 //        }
 
 //        btnSearchTask.setOnClickListener {
-//            if (toDoListMain.contains(titulo)) {
+//            if (toDoListMain.any{it.title == titulo}) {
 //                val intent2 = Intent(MainActivity(), ViewTaskActivity::class.java)
 //                MainActivity().startActivity(intent2)
 //            } else {
 //                edtSearchTaskTyped.error = "Atividade não encontrada :("
 //            }
 //        }
-   }
+    }
 
     override fun onResume() {
         super.onResume()
