@@ -3,14 +3,12 @@ package com.ctt.projetointegradorctt.model
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.CheckBox
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.ctt.projetointegradorctt.MainActivity.Companion.doingListMain
 import com.ctt.projetointegradorctt.MainActivity.Companion.toDoListMain
 import com.ctt.projetointegradorctt.R
-import kotlinx.android.synthetic.main.fragment_to_do.*
 
 class ToDoAdapter(private val toDoList: MutableList<Activities>) : RecyclerView.Adapter<ToDoAdapter.ToDoHolder>() {
 
@@ -18,7 +16,7 @@ class ToDoAdapter(private val toDoList: MutableList<Activities>) : RecyclerView.
         val titleToDo: TextView = view.findViewById(R.id.txtToDoTitle)
         val descToDo: TextView = view.findViewById(R.id.txtToDoDescr)
         val btnRemoved: ImageButton = view.findViewById(R.id.btnRemove)
-        val btnChangeStatus: ImageButton = view.findViewById(R.id.btnChangeStatus)
+        val btnChangeStatusDoing: ImageButton = view.findViewById(R.id.btnChangeStatus)
     }
 
     fun addTask() {
@@ -34,7 +32,7 @@ class ToDoAdapter(private val toDoList: MutableList<Activities>) : RecyclerView.
         holder.titleToDo.text = toDoList[position].title
         holder.descToDo.text = toDoList[position].description
         holder.btnRemoved.setOnClickListener{remove(position)}
-        holder.btnChangeStatus.setOnClickListener{
+        holder.btnChangeStatusDoing.setOnClickListener{
             changeForDoing(toDoList[position])
             remove(position)
         }

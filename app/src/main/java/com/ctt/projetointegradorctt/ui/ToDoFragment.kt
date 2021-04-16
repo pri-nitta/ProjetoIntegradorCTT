@@ -1,27 +1,21 @@
 package com.ctt.projetointegradorctt.ui
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ctt.projetointegradorctt.MainActivity
 import com.ctt.projetointegradorctt.R
 import com.ctt.projetointegradorctt.model.ToDoAdapter
-import com.google.android.material.bottomsheet.BottomSheetBehavior
-import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.google.android.material.snackbar.Snackbar
 
 class ToDoFragment : androidx.fragment.app.Fragment() {
 
     lateinit var adapter: ToDoAdapter
-    val bottomSheetFragment = BottomSheetFragment(::updateToDoList)
+    val bottomSheetFragment = AddTaskBSheetFragment(::updateToDoList)
     //    lateinit var btnSearchTask: Button
     lateinit var edtSearchTaskTyped: EditText
     lateinit var btnAddTask: Button
@@ -53,11 +47,6 @@ class ToDoFragment : androidx.fragment.app.Fragment() {
         //fragment manager mostra onde ele vai aparecer
         //tags para bugs
         //parametros no show
-
-//        btnAddTask.setOnClickListener {
-//            val intent3 = Intent(requireActivity(), AddTaskActivity::class.java)
-//            requireActivity().startActivity(intent3)
-//        }
 
 //        btnSearchTask.setOnClickListener {
 //            if (toDoListMain.any{it.title == titulo}) {

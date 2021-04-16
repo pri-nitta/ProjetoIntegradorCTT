@@ -1,18 +1,22 @@
 package com.ctt.projetointegradorctt.ui
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ctt.projetointegradorctt.MainActivity
 import com.ctt.projetointegradorctt.R
-import com.ctt.projetointegradorctt.model.Activities
 import com.ctt.projetointegradorctt.model.DoingAdapter
+import com.ctt.projetointegradorctt.model.ToDoAdapter
+import kotlinx.android.synthetic.main.fragment_doing.*
 
 class DoingFragment : Fragment() {
+
+    lateinit var doingAdapter: DoingAdapter
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -22,10 +26,19 @@ class DoingFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val doingList = MainActivity.doingListMain
+
         val rvDoing = view.findViewById<RecyclerView>(R.id.doingList)
-        val adapterDoing = DoingAdapter(doingList)
-        rvDoing.adapter = adapterDoing
+        doingAdapter = DoingAdapter(MainActivity.doingListMain)
+        rvDoing.adapter = doingAdapter
         rvDoing.layoutManager = LinearLayoutManager(requireContext())
+    }
+
+    override fun onResume() {
+        super.onResume()
+        doingAdapter.notifyDataSetChanged()
+    }
+
+    private fun updateDoingList(){
+        doingAdapter.addDoingTask()
     }
 }

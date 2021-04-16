@@ -4,24 +4,26 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
 import com.ctt.projetointegradorctt.MainActivity
 import com.ctt.projetointegradorctt.R
 import com.ctt.projetointegradorctt.model.Activities
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.bottomsheet_fragment.*
+import kotlinx.android.synthetic.main.add_task_bsheet_fragment.*
 
-class BottomSheetFragment(private val updateToDoList: () -> Unit) : BottomSheetDialogFragment() {
-//colocar o add task na frente
+
+class AddTaskBSheetFragment(private val updateToDoList: () -> Unit) : BottomSheetDialogFragment() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setStyle(STYLE_NORMAL, R.style.CustomBottomSheetDialogTheme)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.bottomsheet_fragment, container, false)
+        return inflater.inflate(R.layout.add_task_bsheet_fragment, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
