@@ -7,19 +7,8 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         tools:context=".ui.DoingFragment">
 
-    <ImageView
-            android:id="@+id/imgContinue"
-            android:background="@drawable/layout_bg_bottom"
-            android:backgroundTint="@color/colorPrimaryDark"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
-
     <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/doingList"
-            android:paddingTop="20dp"
-            android:layout_marginTop="90dp"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -28,29 +17,4 @@
             app:layout_constraintBottom_toBottomOf="parent"
     />
 
-    <EditText
-            android:id="@+id/edtSearchTask"
-            android:background="@drawable/layout_bg_small"
-            android:backgroundTint="@color/colorLight"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:paddingStart="45dp"
-            android:hint="@string/edtSearch2"
-            android:textSize="15sp"
-            android:layout_marginBottom="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="@+id/imgContinue"
-            tools:ignore="RtlSymmetry"/>
-
-    <ImageButton
-            android:id="@+id/btnSearch"
-            android:src="@drawable/ic_magnifying_glass"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="10dp"
-            android:backgroundTint="@color/colorLight"
-            app:layout_constraintStart_toStartOf="@+id/edtSearchTask"
-            app:layout_constraintTop_toTopOf="@+id/edtSearchTask"
-            app:layout_constraintBottom_toBottomOf="@+id/edtSearchTask"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
