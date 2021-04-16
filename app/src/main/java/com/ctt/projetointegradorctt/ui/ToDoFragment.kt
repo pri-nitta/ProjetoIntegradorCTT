@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ctt.projetointegradorctt.MainActivity
@@ -19,9 +20,9 @@ import com.google.android.material.snackbar.Snackbar
 
 class ToDoFragment : androidx.fragment.app.Fragment() {
 
-//    private lateinit var bottomSheetBehavior: BottomSheetBehavior<ConstraintLayout>
     lateinit var adapter: ToDoAdapter
-//    lateinit var btnSearchTask: Button
+    val bottomSheetFragment = BottomSheetFragment()
+    //    lateinit var btnSearchTask: Button
     lateinit var edtSearchTaskTyped: EditText
     lateinit var btnAddTask: Button
 
@@ -45,17 +46,14 @@ class ToDoFragment : androidx.fragment.app.Fragment() {
 
         val titulo = edtSearchTaskTyped.text.toString()
 
-//        btnAddTask.setOnClickListener {
-//           val modalSheetView = layoutInflater.inflate(R.layout.bottom_sheet_add_task,null)
-//            val dialog = BottomSheetDialog(this)
-//            dialog.setContentView(modalSheetView)
-//            dialog.show()
-//        }
-
         btnAddTask.setOnClickListener{
-            val intent3 = Intent(requireActivity(), AddTaskActivity::class.java)
-            requireActivity().startActivity(intent3)
+            bottomSheetFragment.show(parentFragmentManager, "BottomSheetDialog")
         }
+
+//        btnAddTask.setOnClickListener {
+//            val intent3 = Intent(requireActivity(), AddTaskActivity::class.java)
+//            requireActivity().startActivity(intent3)
+//        }
 
 //        btnSearchTask.setOnClickListener {
 //            if (toDoListMain.any{it.title == titulo}) {
