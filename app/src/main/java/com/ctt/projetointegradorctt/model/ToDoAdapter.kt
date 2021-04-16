@@ -11,7 +11,6 @@ import com.ctt.projetointegradorctt.MainActivity.Companion.toDoListMain
 import com.ctt.projetointegradorctt.R
 
 class ToDoAdapter(private val toDoList: MutableList<Activities>) : RecyclerView.Adapter<ToDoAdapter.ToDoHolder>() {
-
     class ToDoHolder(view: View) : RecyclerView.ViewHolder(view) {
         val titleToDo: TextView = view.findViewById(R.id.txtToDoTitle)
         val descToDo: TextView = view.findViewById(R.id.txtToDoDescr)

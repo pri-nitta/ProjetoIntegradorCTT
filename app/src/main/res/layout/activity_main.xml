@@ -9,13 +9,40 @@
     <TextView
         android:id="@+id/txtTitle"
         android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:background="@color/colorPrimaryDark"
+        android:layout_height="150dp"
+        android:background="@drawable/layout_bg_bottom"
+        android:backgroundTint="@color/colorPrimaryDark"
         android:textColor="@color/colorAccent"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtSearchTask3"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/layout_bg_small"
+        android:backgroundTint="@color/colorLight"
+        android:hint="@string/edtSearch3"
+        android:paddingStart="45dp"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout"
+        tools:ignore="RtlSymmetry" />
+
+    <ImageButton
+        android:id="@+id/btnSearch"
+        android:src="@drawable/ic_magnifying_glass"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:backgroundTint="@color/colorLight"
+        app:layout_constraintStart_toStartOf="@+id/edtSearchTask3"
+        app:layout_constraintTop_toTopOf="@+id/edtSearchTask3"
+        app:layout_constraintBottom_toBottomOf="@+id/edtSearchTask3"/>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
@@ -35,7 +62,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
