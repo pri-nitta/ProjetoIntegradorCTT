@@ -7,14 +7,19 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ctt.projetointegradorctt.MainActivity
 import com.ctt.projetointegradorctt.R
 import com.ctt.projetointegradorctt.model.ToDoAdapter
+import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.google.android.material.snackbar.Snackbar
 
 class ToDoFragment : androidx.fragment.app.Fragment() {
 
+//    private lateinit var bottomSheetBehavior: BottomSheetBehavior<ConstraintLayout>
     lateinit var adapter: ToDoAdapter
 //    lateinit var btnSearchTask: Button
     lateinit var edtSearchTaskTyped: EditText
@@ -37,18 +42,20 @@ class ToDoFragment : androidx.fragment.app.Fragment() {
         btnAddTask = view.findViewById(R.id.btnAdd)
 //        btnSearchTask = view.findViewById(R.id.btnSearch1)
         edtSearchTaskTyped = view.findViewById(R.id.edtSearchTask1)
-//        btnRemoved = view.findViewById(R.id.BtnRemove)
 
         val titulo = edtSearchTaskTyped.text.toString()
+
+//        btnAddTask.setOnClickListener {
+//           val modalSheetView = layoutInflater.inflate(R.layout.bottom_sheet_add_task,null)
+//            val dialog = BottomSheetDialog(this)
+//            dialog.setContentView(modalSheetView)
+//            dialog.show()
+//        }
 
         btnAddTask.setOnClickListener{
             val intent3 = Intent(requireActivity(), AddTaskActivity::class.java)
             requireActivity().startActivity(intent3)
         }
-
-//        btnRemoved.setOnClickListener{
-//            toDoListMain.remove(it)
-//        }
 
 //        btnSearchTask.setOnClickListener {
 //            if (toDoListMain.any{it.title == titulo}) {

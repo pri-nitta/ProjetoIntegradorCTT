@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.CheckBox
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.ctt.projetointegradorctt.MainActivity.Companion.toDoListMain
@@ -16,14 +17,15 @@ class ToDoAdapter(private val toDoList: MutableList<Activities>) : RecyclerView.
     class ToDoHolder(view: View) : RecyclerView.ViewHolder(view) {
         val titleToDo: TextView = view.findViewById(R.id.txtToDoTitle)
         val descToDo: TextView = view.findViewById(R.id.txtToDoDescr)
-//        val btnRemoved: Button = view.findViewById(R.id.BtnRemove)
-//        val chkPass: CheckBox = view.findViewById(R.id.chkConfirm)
-
+        val btnRemoved: ImageButton = view.findViewById(R.id.btnRemove)
     }
 
     fun addTask(newTask: Activities) {
         notifyDataSetChanged()
     }
+
+//    btnRemoved.setOnClickListener {
+//        toDoListMain.remove}
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ToDoHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_to_do, parent, false)
@@ -36,8 +38,4 @@ class ToDoAdapter(private val toDoList: MutableList<Activities>) : RecyclerView.
     }
 
     override fun getItemCount(): Int = toDoList.size
-
-//    val btnRemoved: Button = view.findViewById(R.id.BtnRemove)
-//    btnRemoved.setOnClickListener {
-//        toDoListMain.remove }
 }
