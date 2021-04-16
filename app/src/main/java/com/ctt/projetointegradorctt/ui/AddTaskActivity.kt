@@ -34,7 +34,7 @@ lateinit var descAct : EditText
                tituloAct.error ="Digite ao menos um título!"
            } else{
                val activity = Activities(typedTitle,typedDesc)
-               Snackbar.make(it,"Tarefa cadastrada com sucesso!",Snackbar.LENGTH_LONG).show()
+               Snackbar.make(it.rootView,"Tarefa cadastrada com sucesso!",Snackbar.LENGTH_LONG).show()
                redirectRegister(activity)
            }
         }

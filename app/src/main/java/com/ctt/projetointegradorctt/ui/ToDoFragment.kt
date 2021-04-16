@@ -21,7 +21,7 @@ import com.google.android.material.snackbar.Snackbar
 class ToDoFragment : androidx.fragment.app.Fragment() {
 
     lateinit var adapter: ToDoAdapter
-    val bottomSheetFragment = BottomSheetFragment()
+    val bottomSheetFragment = BottomSheetFragment(::updateToDoList)
     //    lateinit var btnSearchTask: Button
     lateinit var edtSearchTaskTyped: EditText
     lateinit var btnAddTask: Button
@@ -50,6 +50,10 @@ class ToDoFragment : androidx.fragment.app.Fragment() {
             bottomSheetFragment.show(parentFragmentManager, "BottomSheetDialog")
         }
 
+        //fragment manager mostra onde ele vai aparecer
+        //tags para bugs
+        //parametros no show
+
 //        btnAddTask.setOnClickListener {
 //            val intent3 = Intent(requireActivity(), AddTaskActivity::class.java)
 //            requireActivity().startActivity(intent3)
@@ -68,6 +72,11 @@ class ToDoFragment : androidx.fragment.app.Fragment() {
     override fun onResume() {
         super.onResume()
         adapter.notifyDataSetChanged()
+    }
+
+    private fun updateToDoList(){
+        adapter.addTask()
+        //mexer no recycler atualizar.
     }
 }
 

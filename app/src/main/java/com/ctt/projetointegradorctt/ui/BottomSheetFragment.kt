@@ -13,10 +13,8 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.bottomsheet_fragment.*
 
-class BottomSheetFragment : BottomSheetDialogFragment() {
-
-    lateinit var tituloAct: EditText
-    lateinit var descAct: EditText
+class BottomSheetFragment(private val updateToDoList: () -> Unit) : BottomSheetDialogFragment() {
+//colocar o add task na frente
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -30,13 +28,13 @@ class BottomSheetFragment : BottomSheetDialogFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         btnCreateTaskB.setOnClickListener {
-            val typedTitle = tituloAct.text.toString()
-            val typedDesc = descAct.text.toString()
+            val typedTitle = edtTaskTitleB.text.toString()
+            val typedDesc = edtTaskDescB.text.toString()
             if (typedTitle.isEmpty()) {
-                tituloAct.error = "Digite ao menos um título!"
+                edtTaskTitleB.error = "Digite ao menos um título!"
             } else {
                 val activity = Activities(typedTitle, typedDesc)
-//                Snackbar.make(it, "Tarefa cadastrada com sucesso!", Snackbar.LENGTH_LONG).show()
+               Snackbar.make(it.rootView, "Tarefa cadastrada com sucesso!", Snackbar.LENGTH_LONG).show()
                 redirectRegister(activity)
             }
         }
@@ -44,6 +42,8 @@ class BottomSheetFragment : BottomSheetDialogFragment() {
 
     fun redirectRegister(activity: Activities){
         MainActivity.toDoListMain.add(activity)
+        updateToDoList()
+        dismiss()
     }
 }
 

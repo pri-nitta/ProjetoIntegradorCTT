@@ -21,7 +21,7 @@ class ToDoAdapter(private val toDoList: MutableList<Activities>) : RecyclerView.
         val btnChangeStatus: ImageButton = view.findViewById(R.id.btnChangeStatus)
     }
 
-    fun addTask(newTask: Activities) {
+    fun addTask() {
         notifyDataSetChanged()
     }
 
@@ -34,7 +34,10 @@ class ToDoAdapter(private val toDoList: MutableList<Activities>) : RecyclerView.
         holder.titleToDo.text = toDoList[position].title
         holder.descToDo.text = toDoList[position].description
         holder.btnRemoved.setOnClickListener{remove(position)}
-//        holder.btnChangeStatus.setOnClickListener{changeForDoing()}
+        holder.btnChangeStatus.setOnClickListener{
+            changeForDoing(toDoList[position])
+            remove(position)
+        }
     }
 
     fun remove(position: Int) {
