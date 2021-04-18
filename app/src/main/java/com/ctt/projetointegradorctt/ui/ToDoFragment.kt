@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.EditText
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ctt.projetointegradorctt.MainActivity
@@ -16,8 +15,6 @@ class ToDoFragment : androidx.fragment.app.Fragment() {
 
     lateinit var adapter: ToDoAdapter
     val bottomSheetFragment = AddTaskBSheetFragment(::updateToDoList)
-    //    lateinit var btnSearchTask: Button
-    lateinit var edtSearchTaskTyped: EditText
     lateinit var btnAddTask: Button
 
     override fun onCreateView(
@@ -35,10 +32,6 @@ class ToDoFragment : androidx.fragment.app.Fragment() {
         rvToDo.layoutManager = LinearLayoutManager(requireContext())
 
         btnAddTask = view.findViewById(R.id.btnAdd)
-//        btnSearchTask = view.findViewById(R.id.btnSearch1)
-        edtSearchTaskTyped = view.findViewById(R.id.edtSearchTask1)
-
-        val titulo = edtSearchTaskTyped.text.toString()
 
         btnAddTask.setOnClickListener{
             bottomSheetFragment.show(parentFragmentManager, "BottomSheetDialog")
@@ -47,15 +40,6 @@ class ToDoFragment : androidx.fragment.app.Fragment() {
         //fragment manager mostra onde ele vai aparecer
         //tags para bugs
         //parametros no show
-
-//        btnSearchTask.setOnClickListener {
-//            if (toDoListMain.any{it.title == titulo}) {
-//                val intent2 = Intent(MainActivity(), ViewTaskActivity::class.java)
-//                MainActivity().startActivity(intent2)
-//            } else {
-//                edtSearchTaskTyped.error = "Atividade não encontrada :("
-//            }
-//        }
     }
 
     override fun onResume() {
