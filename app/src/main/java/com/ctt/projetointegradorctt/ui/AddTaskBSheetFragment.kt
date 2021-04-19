@@ -36,7 +36,7 @@ class AddTaskBSheetFragment(private val updateToDoList: () -> Unit) : BottomShee
                 edtTaskTitleB.error = "Digite ao menos um título!"
             } else {
                 val activity = Activities(typedTitle, typedDesc)
-               Snackbar.make(it.rootView, "Tarefa cadastrada com sucesso!", Snackbar.LENGTH_LONG).show()
+               Snackbar.make(it, "Tarefa cadastrada com sucesso!", Snackbar.LENGTH_LONG).show()
                 redirectRegister(activity)
             }
         }

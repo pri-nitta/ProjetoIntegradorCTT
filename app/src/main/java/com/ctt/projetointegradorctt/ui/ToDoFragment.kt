@@ -10,11 +10,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ctt.projetointegradorctt.MainActivity
 import com.ctt.projetointegradorctt.R
 import com.ctt.projetointegradorctt.model.ToDoAdapter
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class ToDoFragment : androidx.fragment.app.Fragment() {
 
-    lateinit var adapter: ToDoAdapter
-    val bottomSheetFragment = AddTaskBSheetFragment(::updateToDoList)
+    lateinit var adapterTD: ToDoAdapter
+    val bsFragmentAddTask = AddTaskBSheetFragment(::updateToDoList)
     lateinit var btnAddTask: Button
 
     override fun onCreateView(
@@ -27,29 +28,23 @@ class ToDoFragment : androidx.fragment.app.Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val rvToDo = view.findViewById<RecyclerView>(R.id.toDoList)
-        adapter = ToDoAdapter(MainActivity.toDoListMain)
-        rvToDo.adapter = adapter
+        adapterTD = ToDoAdapter(MainActivity.toDoListMain)
+        rvToDo.adapter = adapterTD
         rvToDo.layoutManager = LinearLayoutManager(requireContext())
 
         btnAddTask = view.findViewById(R.id.btnAdd)
-
         btnAddTask.setOnClickListener{
-            bottomSheetFragment.show(parentFragmentManager, "BottomSheetDialog")
+            bsFragmentAddTask.show(parentFragmentManager, "BottomSheetDialog")
         }
-
-        //fragment manager mostra onde ele vai aparecer
-        //tags para bugs
-        //parametros no show
     }
 
     override fun onResume() {
         super.onResume()
-        adapter.notifyDataSetChanged()
+        adapterTD.notifyDataSetChanged()
     }
 
     private fun updateToDoList(){
-        adapter.addTask()
-        //mexer no recycler atualizar.
+        adapterTD.addTask()
     }
 }
 

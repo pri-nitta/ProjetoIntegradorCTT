@@ -36,6 +36,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtNewTaskTitle" />
 
+    <ImageView
+        android:id="@+id/imgLineHorizontal1"
+        android:layout_width="150dp"
+        android:layout_height="6dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/layout_bg_small"
+        android:backgroundTint="@color/colorPrimaryDark"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
     <EditText
         android:id="@+id/edtTaskTitleB"
         android:layout_width="300dp"
@@ -69,7 +80,8 @@
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_gravity="center"
-        android:layout_margin="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="60dp"
         android:background="@drawable/layout_bg_small"
         android:backgroundTint="@color/colorPrimaryDark"
         android:text="@string/btnCreateTask"

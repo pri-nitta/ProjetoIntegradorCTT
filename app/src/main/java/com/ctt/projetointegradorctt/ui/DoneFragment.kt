@@ -7,11 +7,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.ctt.projetointegradorctt.MainActivity
 import com.ctt.projetointegradorctt.R
 import com.ctt.projetointegradorctt.model.Activities
+import com.ctt.projetointegradorctt.model.DoingAdapter
 import com.ctt.projetointegradorctt.model.DoneAdapter
 
-class DoneFragment : Fragment() {
+class DoneFragment: androidx.fragment.app.Fragment() {
+
+    lateinit var doneAdapter: DoneAdapter
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -21,13 +26,19 @@ class DoneFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val doneList = mutableListOf<Activities>(
-            Activities(title = "Curso Trello", description = "Terminar curso de Trello")
-        )
         val rvDone = view.findViewById<RecyclerView>(R.id.doneList)
-        val adapterDone = DoneAdapter(doneList)
-        rvDone.adapter = adapterDone
+        doneAdapter = DoneAdapter(MainActivity.doneListaMain)
+        rvDone.adapter = doneAdapter
         rvDone.layoutManager = LinearLayoutManager(requireContext())
     }
+
+    override fun onResume() {
+        super.onResume()
+        doneAdapter.notifyDataSetChanged()
+    }
+
+//    private fun updateDoneList(activity: Activities){
+//        updateDoneList()
+//    }
 
 }

@@ -15,7 +15,6 @@ import com.ctt.projetointegradorctt.R
             val titleDone: TextView = view.findViewById(R.id.txtToDoTitle)
             val descDone: TextView = view.findViewById(R.id.txtToDoDescr)
             val btnRemovedDone: ImageButton = view.findViewById(R.id.btnRemove)
-            val btnChangeStatusDone: ImageButton = view.findViewById(R.id.btnChangeStatus)
         }
 
         fun addDoneTask() {

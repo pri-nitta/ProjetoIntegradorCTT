@@ -12,18 +12,14 @@ import com.ctt.projetointegradorctt.R
 class DoingAdapter(private val doingList: MutableList<Activities>) :
     RecyclerView.Adapter<DoingAdapter.DoingHolder>() {
     class DoingHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val titleDoing: TextView = view.findViewById(R.id.txtToDoTitle)
-        val descDoing: TextView = view.findViewById(R.id.txtToDoDescr)
-        val btnRemovedDoing: ImageButton = view.findViewById(R.id.btnRemove)
-        val btnChangeStatusDone: ImageButton = view.findViewById(R.id.btnChangeStatus)
-    }
-
-    fun addDoingTask() {
-        notifyDataSetChanged()
+        val titleDoing: TextView = view.findViewById(R.id.txtTitle)
+        val descDoing: TextView = view.findViewById(R.id.txtDescr)
+        val btnRemovedDoing: ImageButton = view.findViewById(R.id.btnRemove1)
+        val btnChangeStatusDone: ImageButton = view.findViewById(R.id.btnChangeStatus1)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DoingHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_to_do, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_template, parent, false)
         return DoingHolder(view)
     }
 
@@ -44,7 +40,9 @@ class DoingAdapter(private val doingList: MutableList<Activities>) :
 
     fun changeForDone(activities: Activities) {
         MainActivity.doneListaMain.add(activities)
+        notifyDataSetChanged()
     }
+
 
     override fun getItemCount(): Int = doingList.size
 }

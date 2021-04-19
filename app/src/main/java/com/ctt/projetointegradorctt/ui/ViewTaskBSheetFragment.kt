@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import com.ctt.projetointegradorctt.R
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
-class EditTaskBSheetFragment: BottomSheetDialogFragment()  {
+class ViewTaskBSheetFragment: BottomSheetDialogFragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setStyle(STYLE_NORMAL, R.style.CustomBottomSheetDialogTheme)
@@ -18,6 +18,6 @@ class EditTaskBSheetFragment: BottomSheetDialogFragment()  {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.edit_task_bsheet_fragment, container, false)
+        return inflater.inflate(R.layout.view_task_bsheet_fragment, container, false)
     }
 }

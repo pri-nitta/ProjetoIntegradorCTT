@@ -7,13 +7,13 @@
     android:layout_height="wrap_content"
     android:background="@drawable/layout_bg_top"
     android:backgroundTint="@color/colorAccent"
-    tools:context=".ui.EditTaskBSheetFragment">
+    tools:context=".ui.ViewTaskBSheetFragment">
 
     <TextView
         android:id="@+id/txtTaskTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="70dp"
         android:textColor="@color/black"
         android:textSize="25sp"
@@ -36,79 +36,80 @@
     <ImageView
         android:id="@+id/imgLine"
         android:layout_width="2dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="70dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="80dp"
         android:background="@color/colorPrimaryDark"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/txtTaskDesc"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/btnReturn"
+        android:id="@+id/btnEdit"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="80dp"
         android:backgroundTint="@color/colorAccent"
-        android:src="@drawable/ic_arrow"
-        app:layout_constraintEnd_toStartOf="@+id/imgLine"
+        android:src="@drawable/ic_ferramenta_lapis"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgLine"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtTaskStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
+        android:layout_marginStart="30dp"
         android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtTaskTitle"
-        tools:text="Doing" />
+        tools:text="To Do" />
 
-    <EditText
-        android:id="@+id/edtTaskTitle"
-        android:layout_width="350dp"
-        android:layout_height="60dp"
-        android:background="@color/colorLight"
-        android:hint="@string/edtTaskTitle"
-        android:layout_marginTop="20dp"
-        android:paddingStart="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTaskStatus"
-        tools:ignore="RtlSymmetry" />
-
-    <EditText
-        android:id="@+id/edtTaskDesc"
+    <TextView
+        android:id="@+id/txtTaskDesc"
         android:layout_width="350dp"
         android:layout_height="150dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/colorLight"
+        android:layout_marginTop="20dp"
         android:gravity="start"
-        android:hint="@string/edtTaskDesc"
-        android:paddingStart="15dp"
-        android:paddingTop="15dp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtTaskTitle"
-        tools:ignore="RtlSymmetry" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTaskStatus"
+        tools:ignore="RtlSymmetry"
+        tools:text="Preciso estudar as matérias do MBA, bootcamp, faculdade..." />
 
     <Button
-        android:id="@+id/btnFinalizeTask"
+        android:id="@+id/btnExclude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/colorAccent"
+        android:drawableStart="@drawable/ic_trash"
+        android:drawablePadding="8dp"
+        android:text="@string/btnExclude"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@+id/btnCreateTask"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTaskDesc" />
+
+    <Button
+        android:id="@+id/btnCreateTask"
         android:layout_width="350dp"
         android:layout_height="60dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="60dp"
         android:background="@drawable/layout_bg_small"
         android:backgroundTint="@color/colorPrimaryDark"
-        android:text="@string/btnSave"
+        android:text="@string/btnStartTask"
         android:textColor="@color/colorLight"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edtTaskDesc" />
+        app:layout_constraintTop_toBottomOf="@+id/btnExclude" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

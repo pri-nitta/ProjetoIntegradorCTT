@@ -7,7 +7,7 @@
     android:layout_height="80dp">
 
     <TextView
-        android:id="@+id/txtToDoTitle"
+        android:id="@+id/txtTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -15,23 +15,23 @@
         android:textColor="@color/colorPrimary"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/txtToDoDescr"
+        app:layout_constraintBottom_toTopOf="@+id/txtDescr"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Activity title" />
 
     <TextView
-        android:id="@+id/txtToDoDescr"
+        android:id="@+id/txtDescr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtToDoTitle"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle"
         tools:text="Fazer tal coisa" />
 
     <ImageButton
-        android:id="@+id/btnRemove"
+        android:id="@+id/btnRemove1"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:background="@drawable/ic_trash"
@@ -41,14 +41,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/btnChangeStatus"
+        android:id="@+id/btnChangeStatus1"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:background="@drawable/ic_list"
         android:layout_marginEnd="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnRemove"
+        app:layout_constraintEnd_toStartOf="@+id/btnRemove1"
         app:layout_constraintTop_toTopOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
