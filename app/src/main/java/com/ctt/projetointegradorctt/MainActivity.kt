@@ -1,15 +1,17 @@
 package com.ctt.projetointegradorctt
 
 import android.os.Bundle
-import android.os.PersistableBundle
-import android.widget.EditText
-import android.widget.ImageButton
+import android.view.View
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.ViewPager
 import com.ctt.projetointegradorctt.model.Activities
 import com.ctt.projetointegradorctt.model.PagerAdapter
+import com.ctt.projetointegradorctt.model.ToDoAdapter
 import com.google.android.material.tabs.TabLayout
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_to_do.*
 
 class MainActivity : AppCompatActivity() {
 //
@@ -22,6 +24,27 @@ class MainActivity : AppCompatActivity() {
 
         val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
         val viewPager = findViewById<ViewPager>(R.id.viewPager)
+        val textEmpty = findViewById<TextView>(R.id.txtNothingToShow)
+        val imgNothing = findViewById<ImageView>(R.id.imgNothing)
+
+        when {
+            toDoList== null && doingListMain.isNullOrEmpty() && doneListaMain.isNullOrEmpty() -> {
+                textEmpty.text = "Vamos adicionar uma nova tarefa?"
+                textEmpty.visibility = View.VISIBLE
+            }
+            doingListMain.isNullOrEmpty() && doneListaMain.isNullOrEmpty() -> {
+                textEmpty.text = "Vamos começar a fazer alguma tarefa?"
+                textEmpty.visibility = View.VISIBLE
+            }
+            doneListaMain.isNullOrEmpty() -> {
+                textEmpty.text = "Que tal tentar terminar alguma tarefa?"
+                textEmpty.visibility = View.VISIBLE
+            }
+            else ->{
+                textEmpty.visibility= View.GONE
+                imgNothing.visibility= View.GONE
+            }
+        }
 
         viewPager.adapter = PagerAdapter(supportFragmentManager)
         tabLayout.setupWithViewPager(viewPager)
@@ -38,4 +61,7 @@ class MainActivity : AppCompatActivity() {
         val doingListMain = mutableListOf<Activities>()
         val doneListaMain = mutableListOf<Activities>()
     }
+
+
 }
+
