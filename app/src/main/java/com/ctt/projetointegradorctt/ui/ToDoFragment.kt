@@ -1,5 +1,7 @@
 package com.ctt.projetointegradorctt.ui
 
+import com.ctt.projetointegradorctt.ui.AddTaskBSheetFragment
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -16,7 +18,7 @@ class ToDoFragment : androidx.fragment.app.Fragment() {
 
     lateinit var adapterTD: ToDoAdapter
     val bsFragmentAddTask = AddTaskBSheetFragment(::updateToDoList)
-    lateinit var btnAddTask: Button
+    lateinit var btnAddTask: FloatingActionButton
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?

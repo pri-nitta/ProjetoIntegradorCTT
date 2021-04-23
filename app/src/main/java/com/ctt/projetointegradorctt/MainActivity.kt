@@ -14,7 +14,6 @@ import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.fragment_to_do.*
 
 class MainActivity : AppCompatActivity() {
-//
 //    val btnSearch = findViewById<ImageButton>(R.id.btnSearch)
 //    val edtSearchTask = findViewById<EditText>(R.id.edtSearchTask3)
 
@@ -24,11 +23,19 @@ class MainActivity : AppCompatActivity() {
 
         val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
         val viewPager = findViewById<ViewPager>(R.id.viewPager)
+        viewPager.adapter = PagerAdapter(supportFragmentManager)
+        tabLayout.setupWithViewPager(viewPager)
+    }
+
+    override fun onResume() {
+        super.onResume()
+
         val textEmpty = findViewById<TextView>(R.id.txtNothingToShow)
         val imgNothing = findViewById<ImageView>(R.id.imgNothing)
 
+//colocar no fragment
         when {
-            toDoList== null && doingListMain.isNullOrEmpty() && doneListaMain.isNullOrEmpty() -> {
+            toDoListMain.isNullOrEmpty() && doingListMain.isNullOrEmpty() && doneListaMain.isNullOrEmpty() -> {
                 textEmpty.text = "Vamos adicionar uma nova tarefa?"
                 textEmpty.visibility = View.VISIBLE
             }
@@ -40,14 +47,11 @@ class MainActivity : AppCompatActivity() {
                 textEmpty.text = "Que tal tentar terminar alguma tarefa?"
                 textEmpty.visibility = View.VISIBLE
             }
-            else ->{
-                textEmpty.visibility= View.GONE
-                imgNothing.visibility= View.GONE
+            else -> {
+                textEmpty.visibility = View.GONE
+                imgNothing.visibility = View.GONE
             }
         }
-
-        viewPager.adapter = PagerAdapter(supportFragmentManager)
-        tabLayout.setupWithViewPager(viewPager)
     }
 
 //    private fun searchTask(){
@@ -62,6 +66,6 @@ class MainActivity : AppCompatActivity() {
         val doneListaMain = mutableListOf<Activities>()
     }
 
-
 }
+
 
