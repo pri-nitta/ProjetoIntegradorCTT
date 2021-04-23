@@ -7,27 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imgNothing"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/ic_planning"
-        app:layout_constraintBottom_toTopOf="@+id/txtNothingToShow"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
-
-    <TextView
-        android:id="@+id/txtNothingToShow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitle"
-        tools:text="Mensagem aqui" />
-
     <TextView
         android:id="@+id/txtTitle"
         android:layout_width="match_parent"
@@ -78,6 +57,7 @@
         app:tabIndicatorColor="@color/colorAccent"
         app:tabIndicatorGravity="stretch"
         app:tabIndicatorHeight="0dp"
+        app:tabUnboundedRipple="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

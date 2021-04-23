@@ -7,12 +7,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ctt.projetointegradorctt.MainActivity
+import com.ctt.projetointegradorctt.MainActivity.Companion.toDoListMain
 import com.ctt.projetointegradorctt.R
 import com.ctt.projetointegradorctt.model.ToDoAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import kotlinx.android.synthetic.main.fragment_to_do.*
 
 class ToDoFragment : androidx.fragment.app.Fragment() {
 
@@ -43,6 +47,17 @@ class ToDoFragment : androidx.fragment.app.Fragment() {
     override fun onResume() {
         super.onResume()
         adapterTD.notifyDataSetChanged()
+
+        val textEmpty = requireView().findViewById<TextView>(R.id.txtNothingToShow)
+        val imgNothing= requireView().findViewById<ImageView>(R.id.imgNothing)
+
+        if (toDoListMain.isNullOrEmpty()){
+            textEmpty.visibility = View.VISIBLE
+            imgNothing.visibility = View.VISIBLE
+        }else{
+            textEmpty.visibility = View.GONE
+            imgNothing.visibility = View.GONE
+        }
     }
 
     private fun updateToDoList(){

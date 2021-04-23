@@ -27,32 +27,32 @@ class MainActivity : AppCompatActivity() {
         tabLayout.setupWithViewPager(viewPager)
     }
 
-    override fun onResume() {
-        super.onResume()
-
-        val textEmpty = findViewById<TextView>(R.id.txtNothingToShow)
-        val imgNothing = findViewById<ImageView>(R.id.imgNothing)
+//    override fun onResume() {
+//        super.onResume()
+//
+//        val textEmpty = findViewById<TextView>(R.id.txtNothingToShow)
+//        val imgNothing = findViewById<ImageView>(R.id.imgNothing)
 
 //colocar no fragment
-        when {
-            toDoListMain.isNullOrEmpty() && doingListMain.isNullOrEmpty() && doneListaMain.isNullOrEmpty() -> {
-                textEmpty.text = "Vamos adicionar uma nova tarefa?"
-                textEmpty.visibility = View.VISIBLE
-            }
-            doingListMain.isNullOrEmpty() && doneListaMain.isNullOrEmpty() -> {
-                textEmpty.text = "Vamos começar a fazer alguma tarefa?"
-                textEmpty.visibility = View.VISIBLE
-            }
-            doneListaMain.isNullOrEmpty() -> {
-                textEmpty.text = "Que tal tentar terminar alguma tarefa?"
-                textEmpty.visibility = View.VISIBLE
-            }
-            else -> {
-                textEmpty.visibility = View.GONE
-                imgNothing.visibility = View.GONE
-            }
-        }
-    }
+//        when {
+//            toDoListMain.isNullOrEmpty() && doingListMain.isNullOrEmpty() && doneListaMain.isNullOrEmpty() -> {
+//                textEmpty.text = "Vamos adicionar uma nova tarefa?"
+//                textEmpty.visibility = View.VISIBLE
+//            }
+//            doingListMain.isNullOrEmpty() && doneListaMain.isNullOrEmpty() -> {
+//                textEmpty.text = "Vamos começar a fazer alguma tarefa?"
+//                textEmpty.visibility = View.VISIBLE
+//            }
+//            doneListaMain.isNullOrEmpty() -> {
+//                textEmpty.text = "Que tal tentar terminar alguma tarefa?"
+//                textEmpty.visibility = View.VISIBLE
+//            }
+//            else -> {
+//                textEmpty.visibility = View.GONE
+//                imgNothing.visibility = View.GONE
+//            }
+//        }
+//    }
 
 //    private fun searchTask(){
 //        btnSearch.setOnClickListener{
