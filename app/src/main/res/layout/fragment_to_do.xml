@@ -10,36 +10,35 @@
         android:id="@+id/toDoList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="150dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imgNothing"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:background="@drawable/ic_planning"
-        android:backgroundTint="@color/colorAccent2"
-        app:layout_constraintBottom_toTopOf="@id/txtNothingToShow"
+        android:backgroundTint="@color/colorAccent"
+        android:layout_marginTop="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/toDoList"
+        app:layout_constraintTop_toTopOf="parent"
         android:contentDescription="@string/nothing_image" />
 
     <TextView
         android:id="@+id/txtNothingToShow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/to_do_nothing"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="@+id/toDoList"
+        android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/toDoList"
-        android:text="@string/to_do_nothing" />
+        app:layout_constraintTop_toBottomOf="@+id/imgNothing" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnAdd"

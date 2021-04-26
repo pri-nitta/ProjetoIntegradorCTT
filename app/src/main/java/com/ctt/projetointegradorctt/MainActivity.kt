@@ -2,6 +2,8 @@ package com.ctt.projetointegradorctt
 
 import android.os.Bundle
 import android.view.View
+import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -14,8 +16,8 @@ import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.fragment_to_do.*
 
 class MainActivity : AppCompatActivity() {
-//    val btnSearch = findViewById<ImageButton>(R.id.btnSearch)
-//    val edtSearchTask = findViewById<EditText>(R.id.edtSearchTask3)
+    lateinit var btnSearch: ImageButton
+    lateinit var edtSearchTask: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +25,8 @@ class MainActivity : AppCompatActivity() {
 
         val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
         val viewPager = findViewById<ViewPager>(R.id.viewPager)
+        btnSearch = findViewById(R.id.btnSearch)
+        edtSearchTask = findViewById(R.id.edtSearchTask3)
         viewPager.adapter = PagerAdapter(supportFragmentManager)
         tabLayout.setupWithViewPager(viewPager)
     }

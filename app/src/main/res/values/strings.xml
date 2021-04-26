@@ -22,5 +22,7 @@
     <string name="hello_world">Hello Square World!</string>
     <string name="nothing_image">nothing image</string>
     <string name="btnfab">btnfab</string>
-    <string name="to_do_nothing">Vamos adicionar alguma tarefa na lista?</string>
+    <string name="to_do_nothing">Vamos adicionar alguma tarefa na lista? 😎</string>
+    <string name="to_do_nothing2">Que tal começar a fazer alguma tarefa? 😄</string>
+    <string name="to_do_nothing3">Seria bom finalizar alguma tarefa, né? 😉</string>
 </resources>
