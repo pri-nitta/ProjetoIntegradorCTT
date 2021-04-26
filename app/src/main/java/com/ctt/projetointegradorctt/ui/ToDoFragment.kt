@@ -34,7 +34,7 @@ class ToDoFragment : androidx.fragment.app.Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val rvToDo = view.findViewById<RecyclerView>(R.id.toDoList)
-        adapterTD = ToDoAdapter(MainActivity.toDoListMain)
+        adapterTD = ToDoAdapter(toDoListMain)
         rvToDo.adapter = adapterTD
         rvToDo.layoutManager = LinearLayoutManager(requireContext())
 

@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    app:behavior_peekHeight="450dp"
     android:background="@drawable/layout_bg_top"
     android:backgroundTint="@color/colorAccent"
     tools:context=".ui.ViewTaskBSheetFragment">
@@ -64,12 +65,12 @@
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtTaskTitle"
-        tools:text="To Do" />
+        android:text="To Do" />
 
     <TextView
         android:id="@+id/txtTaskDesc"
         android:layout_width="350dp"
-        android:layout_height="150dp"
+        android:layout_height="100dp"
         android:layout_marginTop="20dp"
         android:gravity="start"
         android:textSize="18sp"
@@ -83,12 +84,14 @@
         android:id="@+id/btnExclude"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="50dp"
         android:layout_marginBottom="15dp"
         android:background="@color/colorAccent"
         android:drawableStart="@drawable/ic_trash"
         android:drawablePadding="8dp"
+        android:padding="20dp"
         android:text="@string/btnExclude"
+        android:textAllCaps="false"
         android:textColor="@color/colorPrimaryDark"
         app:layout_constraintBottom_toTopOf="@+id/btnCreateTask"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,15 +100,16 @@
 
     <Button
         android:id="@+id/btnCreateTask"
-        android:layout_width="350dp"
+        android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="60dp"
         android:background="@drawable/layout_bg_small"
         android:backgroundTint="@color/colorPrimaryDark"
         android:text="@string/btnStartTask"
         android:textColor="@color/colorLight"
-        android:textSize="15sp"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:layout_marginBottom="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

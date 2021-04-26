@@ -44,7 +44,7 @@
         android:id="@+id/btnAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="50dp"
+        android:layout_margin="30dp"
         android:backgroundTint="@color/colorPrimary"
         android:src="@drawable/ic_add"
         app:layout_constraintBottom_toBottomOf="parent"

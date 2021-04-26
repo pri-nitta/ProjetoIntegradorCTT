@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ctt.projetointegradorctt.MainActivity
@@ -35,10 +37,17 @@ class DoneFragment: androidx.fragment.app.Fragment() {
     override fun onResume() {
         super.onResume()
         doneAdapter.notifyDataSetChanged()
-    }
 
-//    private fun updateDoneList(activity: Activities){
-//        updateDoneList()
-//    }
+        val textEmpty = requireView().findViewById<TextView>(R.id.txtNothingToShow3)
+        val imgNothing= requireView().findViewById<ImageView>(R.id.imgNothing3)
+
+        if (MainActivity.doneListaMain.isNullOrEmpty()){
+            textEmpty.visibility = View.VISIBLE
+            imgNothing.visibility = View.VISIBLE
+        }else{
+            textEmpty.visibility = View.GONE
+            imgNothing.visibility = View.GONE
+        }
+    }
 
 }
