@@ -7,29 +7,23 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/txtTitle"
+    <ImageView
+        android:id="@+id/imgBase"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:background="@drawable/layout_bg_bottom"
         android:backgroundTint="@color/colorPrimaryDark"
-        android:textColor="@color/colorAccent"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        style="@style/TextViewRoundedCornersBeige"
         android:id="@+id/edtSearchTask3"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:background="@drawable/layout_bg_small"
-        android:backgroundTint="@color/colorLight"
         android:hint="@string/edtSearch3"
         android:paddingStart="45dp"
         android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="@+id/txtTitle"
+        app:layout_constraintBottom_toBottomOf="@+id/imgBase"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tabLayout"
@@ -48,21 +42,18 @@
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        style="@style/TextViewRoundedCornersBeige"
         android:layout_marginTop="10dp"
-        android:background="@drawable/layout_bg_small"
-        android:backgroundTint="@color/colorLight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:tabIndicator="@drawable/layout_bg_small"
         app:tabIndicatorColor="@color/colorAccent"
         app:tabIndicatorGravity="stretch"
         app:tabIndicatorHeight="0dp"
-        app:tabUnboundedRipple="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:tabSelectedTextColor="@color/colorPrimaryDark"
-        app:tabTextColor="@color/colorAccent" />
+        app:tabTextColor="@color/colorAccent"
+        app:tabUnboundedRipple="true" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
@@ -71,6 +62,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/imgBase" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
