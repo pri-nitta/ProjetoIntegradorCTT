@@ -35,7 +35,10 @@ class DoingFragment: androidx.fragment.app.Fragment() {
     override fun onResume() {
         super.onResume()
         doingAdapter.notifyDataSetChanged()
+        updateScreen2()
+    }
 
+    private fun updateScreen2(){
         val textEmpty = requireView().findViewById<TextView>(R.id.txtNothingToShow2)
         val imgNothing= requireView().findViewById<ImageView>(R.id.imgNothing2)
 

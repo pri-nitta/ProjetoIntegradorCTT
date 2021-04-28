@@ -16,6 +16,7 @@ import com.ctt.projetointegradorctt.MainActivity.Companion.toDoListMain
 import com.ctt.projetointegradorctt.R
 import com.ctt.projetointegradorctt.model.ToDoAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_to_do.*
 
 class ToDoFragment : androidx.fragment.app.Fragment() {
@@ -47,10 +48,19 @@ class ToDoFragment : androidx.fragment.app.Fragment() {
     override fun onResume() {
         super.onResume()
         adapterTD.notifyDataSetChanged()
+        updateScreen()
+    }
 
+    private fun updateToDoList(){
+        Snackbar.make(requireView(), getString(R.string.snack_task_registered_confirmation), Snackbar.LENGTH_LONG).show()
+        adapterTD.addTask()
+        adapterTD.notifyDataSetChanged()
+        updateScreen()
+    }
+
+    fun updateScreen(){
         val textEmpty = requireView().findViewById<TextView>(R.id.txtNothingToShow)
         val imgNothing= requireView().findViewById<ImageView>(R.id.imgNothing)
-
         if (toDoListMain.isNullOrEmpty()){
             textEmpty.visibility = View.VISIBLE
             imgNothing.visibility = View.VISIBLE
@@ -58,11 +68,6 @@ class ToDoFragment : androidx.fragment.app.Fragment() {
             textEmpty.visibility = View.GONE
             imgNothing.visibility = View.GONE
         }
-    }
-
-    private fun updateToDoList(){
-        adapterTD.addTask()
-        adapterTD.notifyDataSetChanged()
     }
 }
 

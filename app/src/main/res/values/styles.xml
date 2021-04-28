@@ -15,4 +15,8 @@
         <item name="android:background">@android:color/transparent</item>
     </style>
 
+<!--    <style name="Title">-->
+<!--        <item name="android"-->
+<!--    </style>-->
+
 </resources>

@@ -43,6 +43,5 @@ class DoingAdapter(private val doingList: MutableList<Activities>) :
         notifyDataSetChanged()
     }
 
-
     override fun getItemCount(): Int = doingList.size
 }

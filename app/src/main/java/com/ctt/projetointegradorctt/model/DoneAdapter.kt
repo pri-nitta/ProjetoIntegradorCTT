@@ -2,6 +2,8 @@ package com.ctt.projetointegradorctt.model
 
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.GONE
+import android.view.View.INVISIBLE
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.ImageView
@@ -15,10 +17,6 @@ import com.ctt.projetointegradorctt.R
             val titleDone: TextView = view.findViewById(R.id.txtToDoTitle)
             val descDone: TextView = view.findViewById(R.id.txtToDoDescr)
             val btnRemovedDone: ImageButton = view.findViewById(R.id.btnRemove)
-        }
-
-        fun addDoneTask() {
-            notifyDataSetChanged()
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DoneHolder {

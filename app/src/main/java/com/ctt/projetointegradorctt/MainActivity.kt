@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
             if (typedTask == txtToDoTitle.text) {
                 bsFragmentViewTask.show(supportFragmentManager,"View Task BS")
             }else{
-                edtSearchTask.error=("Atividade não encontrada!")
+                edtSearchTask.error=(getString(R.string.error_find_task))
             }
         }
     }

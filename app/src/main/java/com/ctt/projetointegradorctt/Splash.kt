@@ -1,12 +1,9 @@
 package com.ctt.projetointegradorctt
 import android.content.Intent
 import android.os.Bundle
-import android.app.Activity
 import android.os.Handler
-import android.view.Menu
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat.startActivity
 
 @Suppress("DEPRECATION")
 class Splash : AppCompatActivity() {
@@ -23,6 +20,6 @@ class Splash : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
-        }, 2000)
+        }, 1500)
     }
 }
