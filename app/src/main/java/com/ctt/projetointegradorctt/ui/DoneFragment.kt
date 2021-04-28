@@ -1,7 +1,6 @@
 package com.ctt.projetointegradorctt.ui
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,8 +10,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ctt.projetointegradorctt.MainActivity
 import com.ctt.projetointegradorctt.R
-import com.ctt.projetointegradorctt.model.Activities
-import com.ctt.projetointegradorctt.model.DoingAdapter
 import com.ctt.projetointegradorctt.model.DoneAdapter
 
 class DoneFragment: androidx.fragment.app.Fragment() {

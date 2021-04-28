@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.ctt.projetointegradorctt.MainActivity
 import com.ctt.projetointegradorctt.MainActivity.Companion.doingListMain
 import com.ctt.projetointegradorctt.MainActivity.Companion.toDoListMain
 import com.ctt.projetointegradorctt.R

@@ -1,23 +1,18 @@
 package com.ctt.projetointegradorctt.ui
 
-import com.ctt.projetointegradorctt.ui.AddTaskBSheetFragment
-
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.ctt.projetointegradorctt.MainActivity
 import com.ctt.projetointegradorctt.MainActivity.Companion.toDoListMain
 import com.ctt.projetointegradorctt.R
 import com.ctt.projetointegradorctt.model.ToDoAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.fragment_to_do.*
 
 class ToDoFragment : androidx.fragment.app.Fragment() {
 

@@ -4,15 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.coordinatorlayout.widget.CoordinatorLayout
 import com.ctt.projetointegradorctt.MainActivity
 import com.ctt.projetointegradorctt.R
 import com.ctt.projetointegradorctt.model.Activities
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.google.android.material.snackbar.BaseTransientBottomBar
-import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.add_task_bsheet_fragment.*
 
 class AddTaskBSheetFragment(private val updateToDoList: () -> Unit) : BottomSheetDialogFragment() {

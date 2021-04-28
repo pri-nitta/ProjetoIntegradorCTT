@@ -2,17 +2,14 @@ package com.ctt.projetointegradorctt.model
 
 import android.view.LayoutInflater
 import android.view.View
-import android.view.View.GONE
-import android.view.View.INVISIBLE
 import android.view.ViewGroup
 import android.widget.ImageButton
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.ctt.projetointegradorctt.MainActivity
 import com.ctt.projetointegradorctt.R
 
-    class DoneAdapter (private val doneList: MutableList<Activities>) : RecyclerView.Adapter<DoneAdapter.DoneHolder>(){
+class DoneAdapter (private val doneList: MutableList<Activities>) : RecyclerView.Adapter<DoneAdapter.DoneHolder>(){
         class DoneHolder(view: View) : RecyclerView.ViewHolder(view) {
             val titleDone: TextView = view.findViewById(R.id.txtToDoTitle)
             val descDone: TextView = view.findViewById(R.id.txtToDoDescr)

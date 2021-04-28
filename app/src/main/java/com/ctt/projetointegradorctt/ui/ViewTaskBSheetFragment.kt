@@ -7,11 +7,9 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
-import com.ctt.projetointegradorctt.MainActivity
 import com.ctt.projetointegradorctt.MainActivity.Companion.toDoListMain
 import com.ctt.projetointegradorctt.R
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import kotlinx.android.synthetic.main.item_to_do.*
 
 class ViewTaskBSheetFragment : BottomSheetDialogFragment() {
     lateinit var btnDeleteTask: ImageButton
