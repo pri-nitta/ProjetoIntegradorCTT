@@ -45,6 +45,8 @@ class AddTaskBSheetFragment(private val updateToDoList: () -> Unit) : BottomShee
     fun redirectRegister(activity: Activities){
         MainActivity.toDoListMain.add(activity)
         updateToDoList()
+        edtTaskDescB.text = null
+        edtTaskTitleB.text = null
         dismiss()
     }
 }

@@ -62,6 +62,7 @@ class ToDoFragment : androidx.fragment.app.Fragment() {
 
     private fun updateToDoList(){
         adapterTD.addTask()
+        adapterTD.notifyDataSetChanged()
     }
 }
 

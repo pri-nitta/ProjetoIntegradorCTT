@@ -30,12 +30,23 @@
         app:layout_constraintTop_toBottomOf="@+id/txtToDoTitle"
         tools:text="Fazer tal coisa" />
 
+    <ImageView
+        android:id="@+id/lineItem"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorAccent"
+        android:layout_marginBottom="1dp"
+        android:layout_marginHorizontal="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <ImageButton
         android:id="@+id/btnRemove"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:background="@drawable/ic_trash"
         android:layout_marginEnd="30dp"
+        android:background="@drawable/ic_trash"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -44,8 +55,8 @@
         android:id="@+id/btnChangeStatus"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:background="@drawable/ic_list"
         android:layout_marginEnd="15dp"
+        android:background="@drawable/ic_list"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnRemove"
         app:layout_constraintTop_toTopOf="parent" />
