@@ -1,119 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:behavior_peekHeight="450dp"
-    android:background="@drawable/layout_bg_top"
-    android:backgroundTint="@color/colorAccent"
-    tools:context=".ui.ViewTaskBSheetFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/txtTaskTitle"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="70dp"
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Estudar tudo!" />
-
-    <ImageView
-        android:id="@+id/imgLineHorizontal"
-        android:layout_width="150dp"
-        android:layout_height="6dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/layout_bg_small"
-        android:backgroundTint="@color/colorPrimaryDark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imgLine"
-        android:layout_width="2dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="80dp"
-        android:background="@color/colorPrimaryDark"
-        app:layout_constraintBottom_toTopOf="@+id/txtTaskDesc"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/btnEdit"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="80dp"
+        android:background="@drawable/layout_bg_top"
         android:backgroundTint="@color/colorAccent"
-        android:src="@drawable/ic_ferramenta_lapis"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imgLine"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:behavior_peekHeight="450dp"
+        tools:context=".ui.ViewTaskBSheetFragment">
 
-    <TextView
-        android:id="@+id/txtTaskStatus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtTaskTitle"
-        android:text="To Do" />
+        <TextView
+            android:id="@+id/txtTaskTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="70dp"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Estudar tudo!" />
 
-    <TextView
-        android:id="@+id/txtTaskDesc"
-        android:layout_width="350dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="20dp"
-        android:gravity="start"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTaskStatus"
-        tools:ignore="RtlSymmetry"
-        tools:text="Preciso estudar as matérias do MBA, bootcamp, faculdade..." />
+        <ImageView
+            android:id="@+id/imgLineHorizontal"
+            android:layout_width="150dp"
+            android:layout_height="6dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/layout_bg_small"
+            android:backgroundTint="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnExclude"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="15dp"
-        android:background="@color/colorAccent"
-        android:drawableStart="@drawable/ic_trash"
-        android:drawablePadding="8dp"
-        android:padding="20dp"
-        android:text="@string/btnExclude"
-        android:textAllCaps="false"
-        android:textColor="@color/colorPrimaryDark"
-        app:layout_constraintBottom_toTopOf="@+id/btnCreateTask"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTaskDesc" />
+        <ImageView
+            android:id="@+id/imgLine"
+            android:layout_width="2dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="80dp"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toTopOf="@+id/txtTaskDesc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnCreateTask"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/layout_bg_small"
-        android:backgroundTint="@color/colorPrimaryDark"
-        android:text="@string/btnStartTask"
-        android:textColor="@color/colorLight"
-        android:textSize="16sp"
-        android:textAllCaps="false"
-        android:layout_marginBottom="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnExclude" />
+        <ImageButton
+            android:id="@+id/btnEdit"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="80dp"
+            android:backgroundTint="@color/colorAccent"
+            android:src="@drawable/ic_ferramenta_lapis"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgLine"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtTaskStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="To Do"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtTaskTitle" />
+
+        <TextView
+            android:id="@+id/txtTaskDesc"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:gravity="start"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTaskStatus"
+            tools:ignore="RtlSymmetry"
+            tools:text="Preciso estudar as matérias do MBA, bootcamp, faculdade..." />
+
+        <Button
+            android:id="@+id/btnExclude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/colorAccent"
+            android:drawableStart="@drawable/ic_trash"
+            android:drawablePadding="8dp"
+            android:padding="20dp"
+            android:text="@string/btnExclude"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toTopOf="@+id/btnCreateTask"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTaskDesc" />
+
+        <Button
+            android:id="@+id/btnCreateTask"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/layout_bg_small"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:text="@string/btnStartTask"
+            android:textAllCaps="false"
+            android:textColor="@color/colorLight"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnExclude" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

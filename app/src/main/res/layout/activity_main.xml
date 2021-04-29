@@ -1,67 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageView
-        android:id="@+id/imgBase"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="@drawable/layout_bg_bottom"
-        android:backgroundTint="@color/colorPrimaryDark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
-    <EditText
-        style="@style/TextViewRoundedCornersBeige"
-        android:id="@+id/edtSearchTask3"
-        android:hint="@string/edtSearch3"
-        android:paddingStart="45dp"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imgBase"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tabLayout"
-        tools:ignore="RtlSymmetry" />
+        <ImageView
+            android:id="@+id/imgBase"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/layout_bg_bottom"
+            android:backgroundTint="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/btnSearch"
-        android:src="@drawable/ic_magnifying_glass"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="10dp"
-        android:backgroundTint="@color/colorLight"
-        app:layout_constraintStart_toStartOf="@+id/edtSearchTask3"
-        app:layout_constraintTop_toTopOf="@+id/edtSearchTask3"
-        app:layout_constraintBottom_toBottomOf="@+id/edtSearchTask3"/>
+        <EditText
+            android:id="@+id/edtSearchTask3"
+            style="@style/TextViewRoundedCornersBeige"
+            android:hint="@string/edtSearch3"
+            android:paddingStart="45dp"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgBase"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tabLayout"
+            tools:ignore="RtlSymmetry" />
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabLayout"
-        style="@style/TextViewRoundedCornersBeige"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:tabIndicator="@drawable/layout_bg_small"
-        app:tabIndicatorColor="@color/colorAccent"
-        app:tabIndicatorGravity="stretch"
-        app:tabIndicatorHeight="0dp"
-        app:tabSelectedTextColor="@color/colorPrimaryDark"
-        app:tabTextColor="@color/colorAccent"
-        app:tabUnboundedRipple="true" />
+        <ImageButton
+            android:id="@+id/btnSearch"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/colorLight"
+            android:src="@drawable/ic_magnifying_glass"
+            app:layout_constraintBottom_toBottomOf="@+id/edtSearchTask3"
+            app:layout_constraintStart_toStartOf="@+id/edtSearchTask3"
+            app:layout_constraintTop_toTopOf="@+id/edtSearchTask3" />
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewPager"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgBase" />
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            style="@style/TextViewRoundedCornersBeige"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tabIndicator="@drawable/layout_bg_small"
+            app:tabIndicatorColor="@color/colorAccent"
+            app:tabIndicatorGravity="stretch"
+            app:tabIndicatorHeight="0dp"
+            app:tabSelectedTextColor="@color/colorPrimaryDark"
+            app:tabTextColor="@color/colorAccent"
+            app:tabUnboundedRipple="true" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgBase" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

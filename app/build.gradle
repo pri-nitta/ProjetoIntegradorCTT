@@ -7,6 +7,10 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
+    buildFeatures {
+        dataBinding true
+    }
+
     packagingOptions {
         exclude 'META-INF/atomicfu.kotlin_module'
     }

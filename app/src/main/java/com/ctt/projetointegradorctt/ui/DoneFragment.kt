@@ -6,21 +6,28 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ctt.projetointegradorctt.MainActivity
 import com.ctt.projetointegradorctt.R
+import com.ctt.projetointegradorctt.databinding.FragmentDoneBinding
 import com.ctt.projetointegradorctt.model.DoneAdapter
 
-class DoneFragment: androidx.fragment.app.Fragment() {
+class DoneFragment : androidx.fragment.app.Fragment() {
 
     lateinit var doneAdapter: DoneAdapter
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_done, container, false)
+        val binding = DataBindingUtil.inflate<FragmentDoneBinding>(
+            inflater,
+            R.layout.fragment_done,
+            container,
+            false
+        )
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -36,12 +43,12 @@ class DoneFragment: androidx.fragment.app.Fragment() {
         doneAdapter.notifyDataSetChanged()
 
         val textEmpty = requireView().findViewById<TextView>(R.id.txtNothingToShow3)
-        val imgNothing= requireView().findViewById<ImageView>(R.id.imgNothing3)
+        val imgNothing = requireView().findViewById<ImageView>(R.id.imgNothing3)
 
-        if (MainActivity.doneListaMain.isNullOrEmpty()){
+        if (MainActivity.doneListaMain.isNullOrEmpty()) {
             textEmpty.visibility = View.VISIBLE
             imgNothing.visibility = View.VISIBLE
-        }else{
+        } else {
             textEmpty.visibility = View.GONE
             imgNothing.visibility = View.GONE
         }
