@@ -6,7 +6,9 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "tasks_table")
 data class Activities(
-    @PrimaryKey @ColumnInfo(name = "title")
+    @PrimaryKey @ColumnInfo (name = "id")
+    val id: Int? = 0,
+    @ColumnInfo(name = "title")
     val title: String? = "",
     @ColumnInfo(name = "description")
     var description: String? = ""

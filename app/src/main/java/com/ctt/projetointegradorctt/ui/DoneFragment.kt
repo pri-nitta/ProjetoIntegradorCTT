@@ -15,13 +15,13 @@ import com.ctt.projetointegradorctt.databinding.FragmentDoneBinding
 import com.ctt.projetointegradorctt.model.DoneAdapter
 
 class DoneFragment : androidx.fragment.app.Fragment() {
-
+    private lateinit var binding: FragmentDoneBinding
     lateinit var doneAdapter: DoneAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
-        val binding = DataBindingUtil.inflate<FragmentDoneBinding>(
+        binding = DataBindingUtil.inflate(
             inflater,
             R.layout.fragment_done,
             container,
@@ -32,25 +32,21 @@ class DoneFragment : androidx.fragment.app.Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val rvDone = view.findViewById<RecyclerView>(R.id.doneList)
         doneAdapter = DoneAdapter(MainActivity.doneListaMain)
-        rvDone.adapter = doneAdapter
-        rvDone.layoutManager = LinearLayoutManager(requireContext())
+        binding.doneList.adapter = doneAdapter
+        binding.doneList.layoutManager = LinearLayoutManager(requireContext())
     }
 
     override fun onResume() {
         super.onResume()
         doneAdapter.notifyDataSetChanged()
 
-        val textEmpty = requireView().findViewById<TextView>(R.id.txtNothingToShow3)
-        val imgNothing = requireView().findViewById<ImageView>(R.id.imgNothing3)
-
         if (MainActivity.doneListaMain.isNullOrEmpty()) {
-            textEmpty.visibility = View.VISIBLE
-            imgNothing.visibility = View.VISIBLE
+            binding.txtNothingToShow3.visibility = View.VISIBLE
+            binding.imgNothing3.visibility = View.VISIBLE
         } else {
-            textEmpty.visibility = View.GONE
-            imgNothing.visibility = View.GONE
+            binding.txtNothingToShow3.visibility = View.GONE
+            binding.imgNothing3.visibility = View.GONE
         }
     }
 

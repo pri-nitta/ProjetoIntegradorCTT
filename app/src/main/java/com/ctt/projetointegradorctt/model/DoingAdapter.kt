@@ -8,9 +8,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.ctt.projetointegradorctt.MainActivity
 import com.ctt.projetointegradorctt.R
+import com.ctt.projetointegradorctt.databinding.ItemToDoBinding
 
 class DoingAdapter(private val doingList: MutableList<Activities>) :
     RecyclerView.Adapter<DoingAdapter.DoingHolder>() {
+    
     class DoingHolder(view: View) : RecyclerView.ViewHolder(view) {
         val titleDoing: TextView = view.findViewById(R.id.txtToDoTitle)
         val descDoing: TextView = view.findViewById(R.id.txtToDoDescr)

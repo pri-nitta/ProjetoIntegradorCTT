@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.BaseFragment">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imgBase"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="fitXY"
+                android:background="@drawable/layout_bg_bottom"
+                android:backgroundTint="@color/colorPrimaryDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                style="@style/TextViewRoundedCornersBeige"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tabIndicator="@drawable/layout_bg_small"
+                app:tabIndicatorColor="@color/colorAccent"
+                app:tabIndicatorGravity="stretch"
+                app:tabIndicatorHeight="0dp"
+                app:tabSelectedTextColor="@color/colorPrimaryDark"
+                app:tabTextColor="@color/colorAccent"
+                app:tabUnboundedRipple="true" />
+
+                <EditText
+                    android:id="@+id/edtSearchTask3"
+                    style="@style/TextViewRoundedCornersBeige"
+                    android:hint="@string/edtSearch3"
+                    android:paddingStart="45dp"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tabLayout"
+                    tools:ignore="RtlSymmetry" />
+
+                <ImageButton
+                    android:id="@+id/btnSearch"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/ic_magnifying_glass"
+                    app:layout_constraintBottom_toBottomOf="@+id/edtSearchTask3"
+                    app:layout_constraintStart_toStartOf="@+id/edtSearchTask3"
+                    app:layout_constraintTop_toTopOf="@+id/edtSearchTask3"
+                    android:contentDescription="@string/search_task" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardview" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

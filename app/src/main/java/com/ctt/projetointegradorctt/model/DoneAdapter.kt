@@ -14,6 +14,8 @@ class DoneAdapter (private val doneList: MutableList<Activities>) : RecyclerView
             val titleDone: TextView = view.findViewById(R.id.txtToDoTitle)
             val descDone: TextView = view.findViewById(R.id.txtToDoDescr)
             val btnRemovedDone: ImageButton = view.findViewById(R.id.btnRemove)
+            val btnChangeStatus: ImageButton = view.findViewById(R.id.btnChangeStatus)
+
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DoneHolder {
@@ -25,6 +27,7 @@ class DoneAdapter (private val doneList: MutableList<Activities>) : RecyclerView
             holder.titleDone.text= doneList[position].title
             holder.descDone.text= doneList[position].description
             holder.btnRemovedDone.setOnClickListener{remove(position)}
+            holder.btnChangeStatus.visibility = View.GONE
         }
 
         fun remove(position: Int) {

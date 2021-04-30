@@ -6,10 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ctt.projetointegradorctt.MainActivity.Companion.toDoListMain
 import com.ctt.projetointegradorctt.R
+import com.ctt.projetointegradorctt.databinding.FragmentToDoBinding
 import com.ctt.projetointegradorctt.model.ToDoAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
@@ -18,24 +20,23 @@ class ToDoFragment : androidx.fragment.app.Fragment() {
 
     lateinit var adapterTD: ToDoAdapter
     val bsFragmentAddTask = AddTaskBSheetFragment(::updateToDoList)
-    lateinit var btnAddTask: FloatingActionButton
+    private lateinit var binding: FragmentToDoBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_to_do, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_to_do, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val rvToDo = view.findViewById<RecyclerView>(R.id.toDoList)
         adapterTD = ToDoAdapter(toDoListMain)
-        rvToDo.adapter = adapterTD
-        rvToDo.layoutManager = LinearLayoutManager(requireContext())
+        binding.toDoList.adapter = adapterTD
+        binding.toDoList.layoutManager = LinearLayoutManager(requireContext())
 
-        btnAddTask = view.findViewById(R.id.btnAdd)
-        btnAddTask.setOnClickListener{
+        binding.btnAdd.setOnClickListener{
             bsFragmentAddTask.show(parentFragmentManager, "BottomSheetDialog")
         }
     }
@@ -54,14 +55,12 @@ class ToDoFragment : androidx.fragment.app.Fragment() {
     }
 
     fun updateScreen(){
-        val textEmpty = requireView().findViewById<TextView>(R.id.txtNothingToShow)
-        val imgNothing= requireView().findViewById<ImageView>(R.id.imgNothing)
         if (toDoListMain.isNullOrEmpty()){
-            textEmpty.visibility = View.VISIBLE
-            imgNothing.visibility = View.VISIBLE
+            binding.txtNothingToShow.visibility = View.VISIBLE
+            binding.imgNothing.visibility = View.VISIBLE
         }else{
-            textEmpty.visibility = View.GONE
-            imgNothing.visibility = View.GONE
+            binding.txtNothingToShow.visibility = View.GONE
+            binding.imgNothing.visibility = View.GONE
         }
     }
 }

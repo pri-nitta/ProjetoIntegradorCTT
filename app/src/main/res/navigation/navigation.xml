@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/addTaskBSheetFragment">
+
+    <fragment
+        android:id="@+id/addTaskBSheetFragment"
+        android:name="com.ctt.projetointegradorctt.ui.AddTaskBSheetFragment"
+        android:label="AddTaskBSheetFragment" />
+    <fragment
+        android:id="@+id/toDoFragment"
+        android:name="com.ctt.projetointegradorctt.ui.ToDoFragment"
+        android:label="ToDoFragment">
+        <action
+            android:id="@+id/action_toDoFragment_to_addTaskBSheetFragment"
+            app:destination="@id/addTaskBSheetFragment" />
+    </fragment>
+</navigation>
