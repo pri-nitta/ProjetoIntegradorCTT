@@ -19,7 +19,6 @@ import com.google.android.material.snackbar.Snackbar
 class ToDoFragment : androidx.fragment.app.Fragment() {
 
     lateinit var adapterTD: ToDoAdapter
-    val bsFragmentAddTask = AddTaskBSheetFragment(::updateToDoList)
     private lateinit var binding: FragmentToDoBinding
 
     override fun onCreateView(
@@ -35,10 +34,6 @@ class ToDoFragment : androidx.fragment.app.Fragment() {
         adapterTD = ToDoAdapter(toDoListMain)
         binding.toDoList.adapter = adapterTD
         binding.toDoList.layoutManager = LinearLayoutManager(requireContext())
-
-        binding.btnAdd.setOnClickListener{
-            bsFragmentAddTask.show(parentFragmentManager, "BottomSheetDialog")
-        }
     }
 
     override fun onResume() {
@@ -50,7 +45,6 @@ class ToDoFragment : androidx.fragment.app.Fragment() {
     private fun updateToDoList(){
         Snackbar.make(requireView(), getString(R.string.snack_task_registered_confirmation), Snackbar.LENGTH_LONG).show()
         adapterTD.addTask()
-        adapterTD.notifyDataSetChanged()
         updateScreen()
     }
 

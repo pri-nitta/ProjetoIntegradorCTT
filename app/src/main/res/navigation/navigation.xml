@@ -8,13 +8,40 @@
     <fragment
         android:id="@+id/addTaskBSheetFragment"
         android:name="com.ctt.projetointegradorctt.ui.AddTaskBSheetFragment"
+        tools:layout="@layout/add_task_bsheet_fragment"
         android:label="AddTaskBSheetFragment" />
     <fragment
         android:id="@+id/toDoFragment"
+        tools:layout="@layout/fragment_to_do"
         android:name="com.ctt.projetointegradorctt.ui.ToDoFragment"
         android:label="ToDoFragment">
         <action
             android:id="@+id/action_toDoFragment_to_addTaskBSheetFragment"
             app:destination="@id/addTaskBSheetFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/baseFragment"
+        tools:layout="@layout/fragment_base"
+        android:name="com.ctt.projetointegradorctt.ui.BaseFragment"
+        android:label="BaseFragment" >
+        <action
+            android:id="@+id/action_baseFragment_to_toDoFragment"
+            app:destination="@id/toDoFragment" />
+        <action
+            android:id="@+id/action_baseFragment_to_doingFragment"
+            app:destination="@id/doingFragment" />
+        <action
+            android:id="@+id/action_baseFragment_to_doneFragment"
+            app:destination="@id/doneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doingFragment"
+        tools:layout="@layout/fragment_doing"
+        android:name="com.ctt.projetointegradorctt.ui.DoingFragment"
+        android:label="DoingFragment" />
+    <fragment
+        android:id="@+id/doneFragment"
+        tools:layout="@layout/fragment_done"
+        android:name="com.ctt.projetointegradorctt.ui.DoneFragment"
+        android:label="DoneFragment" />
 </navigation>
