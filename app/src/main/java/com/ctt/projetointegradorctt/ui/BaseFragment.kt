@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import com.ctt.projetointegradorctt.MainActivity.Companion.toDoListMain
 import com.ctt.projetointegradorctt.R
 import com.ctt.projetointegradorctt.databinding.FragmentBaseBinding
 import com.ctt.projetointegradorctt.model.PagerAdapter
@@ -16,6 +15,7 @@ class BaseFragment : Fragment() {
 
     private lateinit var binding: FragmentBaseBinding
     private val bsFragmentViewTask = ViewTaskBSheetFragment()
+    private val bsFragmentAddTask = AddTaskBSheetFragment()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -31,6 +31,10 @@ class BaseFragment : Fragment() {
         val edtSearchTask = binding.edtSearchTask3
         viewPager.adapter = PagerAdapter(childFragmentManager)
         tabLayout.setupWithViewPager(viewPager)
+
+        binding.btnAdd.setOnClickListener{
+            bsFragmentAddTask.show(childFragmentManager, "Add task bs")
+        }
 
         binding.btnSearch.setOnClickListener {
             val typedTask = edtSearchTask.text.toString()

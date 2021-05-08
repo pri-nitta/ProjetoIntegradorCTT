@@ -27,10 +27,10 @@ class DoingFragment: androidx.fragment.app.Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         doingAdapter = DoingAdapter(MainActivity.doingListMain)
         binding.doingList.adapter = doingAdapter
         binding.doingList.layoutManager = LinearLayoutManager(requireContext())
+        updateScreen2()
     }
 
     override fun onResume() {

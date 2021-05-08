@@ -25,8 +25,7 @@ class DoneFragment : androidx.fragment.app.Fragment() {
             inflater,
             R.layout.fragment_done,
             container,
-            false
-        )
+            false)
         return binding.root
     }
 
@@ -35,12 +34,15 @@ class DoneFragment : androidx.fragment.app.Fragment() {
         doneAdapter = DoneAdapter(MainActivity.doneListaMain)
         binding.doneList.adapter = doneAdapter
         binding.doneList.layoutManager = LinearLayoutManager(requireContext())
+        updateScreen3()
     }
 
     override fun onResume() {
         super.onResume()
         doneAdapter.notifyDataSetChanged()
-
+        updateScreen3()
+    }
+    private fun updateScreen3() {
         if (MainActivity.doneListaMain.isNullOrEmpty()) {
             binding.txtNothingToShow3.visibility = View.VISIBLE
             binding.imgNothing3.visibility = View.VISIBLE

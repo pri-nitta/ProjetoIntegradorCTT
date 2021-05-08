@@ -4,13 +4,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import com.ctt.projetointegradorctt.MainActivity
 import com.ctt.projetointegradorctt.R
 import com.ctt.projetointegradorctt.model.Activities
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.add_task_bsheet_fragment.*
 
-class AddTaskBSheetFragment(private val updateToDoList: () -> Unit) : BottomSheetDialogFragment() {
+//class AddTaskBSheetFragment(private val updateToDoList: () -> Unit) : BottomSheetDialogFragment() {
+    class AddTaskBSheetFragment() : BottomSheetDialogFragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setStyle(STYLE_NORMAL, R.style.CustomBottomSheetDialogTheme)
@@ -41,7 +45,7 @@ class AddTaskBSheetFragment(private val updateToDoList: () -> Unit) : BottomShee
 
     private fun redirectRegister(activity: Activities) {
         MainActivity.toDoListMain.add(activity)
-        updateToDoList()
+//        updateToDoList()
         edtTaskDescB.text = null
         edtTaskTitleB.text = null
         dismiss()
